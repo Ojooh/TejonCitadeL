@@ -16,13 +16,20 @@
     <link rel="stylesheet" href="lib/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="lib/animation/css/animate.min.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
+    <!-- <link rel="stylesheet" href="css/base.css"> -->
     <link rel="stylesheet" href="css/style.css">
 
 
     <title>Tejon Citadel Project</title>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/animation/js/wow.min.js"></script>
+    <script src="lib/particle/particle.min.js"></script>
 </head>
 <body class="root">
+    <div id="preloader-active"></div>
     <header id="header">
 
     </header>
@@ -32,18 +39,40 @@
         <section id="btc-counter"></section>
         <section id="newsletter"></section>
     </main>
-    <footer></footer>
+    <footer id="footer"></footer>
+    <div id="back-to-top">
+        <a href="#" class="show">
+            <i class="fas fa-level-up-alt"></i>
+        </a>
+    </div>
 
 
 
 
     <!-- <script src="lib/jquery/jquery-3.4.1.min.js"></script> -->
-    <script src="js/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/animation/js/wow.min.js"></script>
+    
     <script src="js/base.js"></script>
+    <script src="js/app.js"></script>
     <script>
-        new WOW().init();
+        var year = $(".copyright-year");
+        year.html("&copy; " + new Date().getFullYear());
+
+        $(window).on('scroll', function () {
+            var scroll = $(window).scrollTop();
+            if (scroll < 400) {
+                $(".header-sticky").removeClass("sticky-bar");
+                $('#back-to-top').fadeOut(500);
+            } else {
+                $(".header-sticky").addClass("sticky-bar");
+                $('#back-to-top').fadeIn(500);
+                }
+        });
+
+        $('#back-to top a').on("click", function () {
+                $('body,html').animate({ scrollTop: 0 }, 800); return false;
+        });
+
+        
     </script>
 </body>
 </html>
