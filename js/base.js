@@ -4,7 +4,7 @@ jQuery(window).ready(function ($) {
     var about = $("#aboutUs");
     var videBG = $("#video-bg");
     var btcCounter = $("#btc-counter");
-    var newsletter = $("#newsletter");
+    // var newsletter = $("#newsletter");
     var footer = $("#footer");
 
     preloader.load('components/preloader.html');
@@ -12,7 +12,7 @@ jQuery(window).ready(function ($) {
     about.load('components/aboutUs.html');
     videBG.load('components/videoBg.html');
     btcCounter.load('components/BTCCounter.html');
-    newsletter.load('components/newsletter.html');
+    // newsletter.load('components/newsletter.html');
     footer.load('components/footer.html');
 
     $('#preloader-active').delay(4500).fadeOut('slow');
