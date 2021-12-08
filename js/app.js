@@ -131,3 +131,21 @@ particlesJS('particles-js',
     }
 
 );
+
+var year = $(".copyright-year");
+year.html("&copy; " + new Date().getFullYear());
+
+$(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
+    if (scroll < 400) {
+        $(".header-sticky").removeClass("sticky-bar");
+        $('#back-to-top').fadeOut(500);
+    } else {
+        $(".header-sticky").addClass("sticky-bar");
+        $('#back-to-top').fadeIn(500);
+    }
+});
+
+$('#back-to top a').on("click", function () {
+    $('body,html').animate({ scrollTop: 0 }, 800); return false;
+});
