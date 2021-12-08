@@ -132,7 +132,7 @@ video {
   font-size: 1.2rem;
   letter-spacing: 2px;
   text-align: center;
-  padding-bottom: 90px;
+  /*padding-bottom: 90px;*/   
 }
 
 .root #aboutUs .aboutus-card {
@@ -212,7 +212,8 @@ video {
   padding: 50px 0;
   z-index: 0;
   color: #fff;
-  font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial,
+ sans-serif;
   text-align: center;
   width: 100%;
   overflow: hidden;
