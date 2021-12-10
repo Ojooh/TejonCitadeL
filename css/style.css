@@ -7,6 +7,11 @@
           box-sizing: inherit;
 }
 
+@font-face {
+  font-family: jetBrains;
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
 html {
   font-size: 62.5%;
   overflow: auto;
@@ -41,7 +46,7 @@ a:hover, a:focus {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'din-2014', 'Source Sans Pro', sans-serif;
+  font-family: jetBrains;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.1em;
@@ -93,7 +98,7 @@ video {
 
 .row-spacing {
   margin: 0 auto;
-  margin-top: 15rem;
+  margin-top: 1rem;
 }
 
 .btn-outline-tejon {
@@ -252,7 +257,7 @@ video {
 }
 
 .root #header .navbar .logo-txt strong {
-  font-family: cursive;
+  font-family: jetBrains;
   font-weight: 900;
   font-size: 19px;
 }
@@ -272,7 +277,7 @@ video {
 
 .root #header .header-section .header-hero .hero-title {
   text-transform: capitalize !important;
-  font-size: 5.7rem;
+  font-size: 4.7rem;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -474,6 +479,12 @@ video {
   color: #f2a900;
 }
 
+.root #aboutUs .aboutus-card .aboutus-card-icon i {
+  margin-left: 24% !important;
+  margin-top: 23% !important;
+  font-size: 40px;
+}
+
 .root #aboutUs .aboutus-card .aboutus-card-title {
   font-weight: bold;
   font-size: 24px;
@@ -535,7 +546,7 @@ video {
   padding: 50px 0;
   z-index: 0;
   color: #fff;
-  font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: jetBrains;
   text-align: center;
   width: 100%;
   overflow: hidden;
@@ -605,7 +616,7 @@ video {
 
 .root #video-bg .imgbg .imgimgid img {
   width: 100% !important;
-  height: 327px !important;
+  height: 600px !important;
 }
 
 .root #btc-counter {
@@ -750,7 +761,7 @@ video {
   padding-left: 2rem;
   color: #a9b1b6;
   font-size: 1.4rem;
-  font-family: 'din-2014', 'Source Sans Pro', sans-serif;
+  font-family: jetBrains;
 }
 
 @media (max-width: 992px) {

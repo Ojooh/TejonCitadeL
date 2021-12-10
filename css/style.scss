@@ -6,6 +6,11 @@
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: jetBrains;
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+
 html {
   font-size: 62.5%;
 
@@ -41,7 +46,8 @@ a {
 
 body {
   box-sizing: border-box;
-  font-family: 'din-2014', 'Source Sans Pro', sans-serif;
+  font-family: jetBrains;
+  // font-family: 'din-2014', 'Source Sans Pro', sans-serif;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.1em;
@@ -92,7 +98,7 @@ video {
 
 .row-spacing {
   margin: 0 auto;
-  margin-top: 15rem;
+  margin-top: 1rem;
 }
 
 .btn-outline-tejon {
@@ -231,7 +237,7 @@ video {
         line-height: 1 !important;
 
         strong {
-          font-family: cursive;
+          font-family: jetBrains;
           font-weight: 900;
           font-size: 19px;
         }
@@ -250,7 +256,7 @@ video {
 
         .hero-title {
           text-transform: capitalize !important;
-          font-size: 5.7rem;
+          font-size: 4.7rem;
           font-weight: 700;
           line-height: 1.2;
           text-align: center;
@@ -435,6 +441,12 @@ video {
         background-color: #2b313b;
         border-radius: 100%;
         color: #f2a900;
+
+        i {
+          margin-left: 24% !important;
+          margin-top: 23% !important;
+          font-size: 40px;
+        }
       }
 
       .aboutus-card-title {
@@ -503,8 +515,9 @@ video {
       padding: 50px 0;
       z-index: 0;
       color: #fff;
-      font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial,
-        sans-serif;
+      font-family: jetBrains;
+      // font-family: 'Signika Negative', 'Helvetica Neue', Helvetica, Arial,
+      // sans-serif;
       text-align: center;
       width: 100%;
       overflow: hidden;
@@ -573,8 +586,13 @@ video {
 
         img {
           width: 100% !important;
-          height: 327px !important;
+          height: 600px !important;
         }
+
+        // img {
+        //   width: 100% !important;
+        //   height: 327px !important;
+        // }
       }
     }
   }
@@ -695,7 +713,8 @@ video {
               padding-left: 2rem;
               color: #a9b1b6;
               font-size: 1.4rem;
-              font-family: 'din-2014', 'Source Sans Pro', sans-serif;
+              font-family: jetBrains;
+              // font-family: 'din-2014', 'Source Sans Pro', sans-serif;
 
               @media (max-width: 992px) {
                 margin-top: 1.5rem !important;

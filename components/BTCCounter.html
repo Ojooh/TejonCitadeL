@@ -23,36 +23,36 @@
 </div>
 
 <script>
-    const delay = ms => new Promise(res => setTimeout(res, ms));
-    function calcPercentage(init, cur){
-        var perc = ((cur - init) / init ) * 100
+    var delay = ms => new Promise(res => setTimeout(res, ms));
+    function calcPercentage(init, cur) {
+        var perc = ((cur - init) / init) * 100
         return (perc.toFixed(4).toString()) + "%";
     }
     function btcGetData() {
         var initP = 0;
         var curP = 0;
         var i = 0;
-        var formatter = new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD',});
+        var formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', });
         const ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade');
-        var P = $("#Price");
-        var percent = $("#Perc");
+        // var P = $("#Price");
+        // var percent = $("#Perc");
         ws.onopen = function (evt) {
             console.log("CONNECTED");
         };
         ws.onmessage = async function (evt) {
             var data = JSON.parse(evt.data);
-            if (i == 0 ) {
+            if (i == 0) {
                 curP = data.p;
                 initP = data.p;
 
             } else {
                 initP = curP
-                curP = data.p;  
+                curP = data.p;
             }
             var perc = calcPercentage(initP, curP);
-            P.html(formatter.format(parseFloat(data.p)))
-            percent.html(perc);
-            // console.log(perc)
+            $("#Price").html(formatter.format(parseFloat(data.p)))
+            $("#Perc").html(perc);
+            // console.log(P.html())
             i = i + 1
             await delay(5000);
         };
