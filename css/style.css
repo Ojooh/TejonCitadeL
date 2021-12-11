@@ -250,7 +250,7 @@ video {
 
 .root #header .navbar .logo-txt {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   color: #f2a900;
   margin-right: 1rem;
   line-height: 1 !important;
@@ -259,7 +259,7 @@ video {
 .root #header .navbar .logo-txt strong {
   font-family: jetBrains;
   font-weight: 900;
-  font-size: 19px;
+  font-size: 22px;
 }
 
 .root #header .header-section {
@@ -326,6 +326,18 @@ video {
   }
 }
 
+.root #header .header-section .floating-icons .hero-img {
+  width: 80px;
+  height: 80px;
+}
+
+@media (max-width: 992px) {
+  .root #header .header-section .floating-icons .hero-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .root #header .header-section .floating-icons .float-1 {
   position: inherit;
   top: 40px;
@@ -361,6 +373,11 @@ video {
   animation-delay: 2s;
 }
 
+.root #header .header-section .floating-icons .float-2 img {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
 .root #header .header-section .floating-icons .float-3 {
   position: inherit;
   top: 40px;
@@ -382,9 +399,14 @@ video {
   animation-delay: 3s;
 }
 
+.root #header .header-section .floating-icons .float-3 img {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
 .root #header .header-section .floating-icons .float-4 {
   position: inherit;
-  top: 70%;
+  top: 50%;
   left: 70px;
   width: 80px;
   height: 90px;
@@ -393,22 +415,16 @@ video {
 
 .root #header .header-section .floating-icons .float-5 {
   position: inherit;
-  top: 60%;
+  top: 38%;
   left: 47%;
   width: 80px;
   height: 90px;
   color: #f2a900;
 }
 
-@media (max-width: 992px) {
-  .root #header .header-section .floating-icons .float-5 {
-    top: 68%;
-  }
-}
-
 .root #header .header-section .floating-icons .float-6 {
   position: inherit;
-  top: 70%;
+  top: 50%;
   right: 70px;
   width: 80px;
   height: 90px;
@@ -426,10 +442,19 @@ video {
   animation-delay: 1s;
 }
 
+.root #header .header-section .floating-icons .float-6 img {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
 .root #header .header-section .floating-icons i {
   color: #f2a900;
   font-size: 50px;
   opacity: 0.67;
+  --animate-duration: 10s;
+}
+
+.root #header .header-section .floating-icons img {
   --animate-duration: 10s;
 }
 
@@ -477,12 +502,18 @@ video {
   background-color: #2b313b;
   border-radius: 100%;
   color: #f2a900;
+  padding: 5%;
 }
 
 .root #aboutUs .aboutus-card .aboutus-card-icon i {
   margin-left: 24% !important;
   margin-top: 23% !important;
   font-size: 40px;
+}
+
+.root #aboutUs .aboutus-card .aboutus-card-icon img {
+  width: 60px;
+  height: 60px;
 }
 
 .root #aboutUs .aboutus-card .aboutus-card-title {
@@ -839,7 +870,13 @@ video {
 .root #footer .footer-logo {
   height: auto;
   max-height: 100px;
-  padding: 10px 30%;
+  padding: 10px 32%;
+}
+
+@media (max-width: 992px) {
+  .root #footer .footer-logo {
+    padding: 10px 30% 10px 20%;
+  }
 }
 
 .root #footer .footer-logo img {
@@ -852,6 +889,12 @@ video {
   width: 100%;
   margin: 10px auto;
   padding: 0 25%;
+}
+
+@media (max-width: 992px) {
+  .root #footer .footer-title {
+    padding: 10px 22%;
+  }
 }
 
 .root #footer .footer-title .footer-logo-txt {
