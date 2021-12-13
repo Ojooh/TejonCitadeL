@@ -857,6 +857,28 @@ video {
   }
 }
 
+.root #btc-countery {
+  width: 100%;
+  height: auto;
+  padding: 10%;
+}
+
+.root #btc-countery .btc-counter-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f2a900;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 10px 20px;
+}
+
 .root #footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -966,6 +988,19 @@ video {
   color: #f2a900;
 }
 
+.root #footer .footer-terms-privacy {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 25%;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .root #footer .footer-terms-privacy {
+    padding: 10px 22%;
+  }
+}
+
 .root #footer .footer-terms-privacy ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -988,6 +1023,15 @@ video {
   margin-top: 20px;
   font-size: 14px;
   color: #a9b1b6;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .root #footer .footer-copyright {
+    padding: 10px 22%;
+  }
 }
 
 .root #footer .footer-about .footer-subtitle,

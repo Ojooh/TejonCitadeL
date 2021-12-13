@@ -823,6 +823,23 @@ video {
     }
   }
 
+  #btc-countery {
+    width: 100%;
+    height: auto;
+    padding: 10%;
+    .btc-counter-section {
+      width: 100%;
+      display: flex;
+      color: #f2a900;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      // opacity: 0.8;
+      // background-color: #20252c;
+      padding: 10px 20px;
+    }
+  }
+
   #footer {
     display: flex;
     background-color: #111316;
@@ -922,6 +939,15 @@ video {
     }
 
     .footer-terms-privacy {
+      width: 100%;
+      margin: 10px auto;
+      padding: 0 25%;
+      text-align: center;
+
+      @media (max-width: 992px) {
+        padding: 10px 22%;
+      }
+
       ul {
         display: -webkit-box;
         display: flex;
@@ -944,6 +970,14 @@ video {
       margin-top: 20px;
       font-size: 14px;
       color: #a9b1b6;
+      width: 100%;
+      margin: 20px auto;
+      // padding: 0 25%;
+      text-align: center;
+
+      @media (max-width: 992px) {
+        padding: 10px 22%;
+      }
     }
 
     .footer-about,
