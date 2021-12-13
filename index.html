@@ -27,6 +27,7 @@
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="lib/animation/js/wow.min.js"></script>
     <script src="lib/particle/particle.min.js"></script>
+    
 </head>
 
 <body id="particles-js" class="root">
@@ -35,9 +36,23 @@
 
     </header>
     <main>
+        <section id="btc-counter"></section>
         <section id="aboutUs"></section>
         <section id="video-bg"></section>
-        <section id="btc-counter"></section>
+        
+        <section id="btc-calc">
+            <div class="container my-4">
+                <div class="row justify-content-center row-spacing">
+                    <!-- CryptoRival Calculator Widget BEGIN -->
+                    <script type="text/javascript" src="https://static.cryptorival.com/js/calcwidget.js"></script>
+                    <a id="cr-copyright" href="https://cryptorival.com/" class="" target="_blank" rel="nofollow">Powered by CryptoRival</a>
+                    <script type="text/javascript">
+                        showCalc('bitcoin', '500', false, '0', 'f93', 'f93', 'f93', '4e9f15', '09c', 'f0ad4e', 'd9534f', 'f5f5f5', 'eee');
+                    </script>
+                    <!-- CryptoRival Calculator Widget END -->
+                </div>
+            </div>
+        </section>
         <!-- <section id="newsletter"></section> -->
     </main>
     <footer id="footer"></footer>
@@ -54,6 +69,7 @@
 
     <script src="js/base.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 
 </html>
