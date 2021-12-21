@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 
-    <title>Tejon Citadel Project</title>
+    <title>Tejon Citadel</title>
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -253,14 +253,14 @@
         <section id="btc-calc">
             <div class="container my-4">
                 <div class="row justify-content-center row-spacing">
-                    <!-- CryptoRival Calculator Widget BEGIN -->
-                    <script type="text/javascript" src="https://static.cryptorival.com/js/calcwidget.js"></script>
-                    <a id="cr-copyright" href="https://cryptorival.com/" class="" target="_blank" rel="nofollow">Powered
-                        by CryptoRival</a>
-                    <script type="text/javascript">
-                        showCalc('bitcoin', '500', false, '0', 'f93', 'f93', 'f93', '4e9f15', '09c', 'f0ad4e', 'd9534f', 'f5f5f5', 'eee');
-                    </script>
-                    <!-- CryptoRival Calculator Widget END -->
+                    <!-- Minning Calculator -->
+                        <a class="minerstat-widget" title="BTC mining calculator" data-coin="BTC" data-algo="SHA-256" data-info="yes"
+                            data-style="dark" data-color="" data-unit="TH" data-hashrate="100" data-width="500" rel="nofollow"
+                            href="https://minerstat.com/coin/BTC">
+                            Bitcoin mining calculator
+                        </a>
+                        <script async src="https://api.minerstat.com/v2/widgets/coin.js" charset="utf-8"></script>
+                    <!-- Minning Calculator End-->
                 </div>
             </div>
         </section>
