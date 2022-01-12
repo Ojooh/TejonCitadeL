@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+/* * {
+  font-family: 'Lato', sans-serif !important;
+  box-sizing: border-box;
+} */
+#top-header #name-nav{
+  font-size:20px;
+}
+#top-header{
+  width: 100%;
+  height: 70px;
+  background: black;
+  margin-bottom: 30px;
+}
+
+#top-header a {
+  text-decoration: none;
+}
+
+#top-header .button {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+  color: #FFF;
+  line-height: 36px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#top-header .button:hover {
+  color: #dc540c;
+  border: 1px solid #dc540c;
+}
+
+#top-header p {
+  font-size: 30px;
+  float: left;
+  line-height: 67px;
+  color: #FFF;
+  margin-left: 20px;
+}
+
+#top-header .nice {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+#top-header .nice > h1 {
+  text-align: center;
+  font-size: 140px;
+  font-weight: 300;
+  line-height: 70vh;
+}
