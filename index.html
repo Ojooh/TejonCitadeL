@@ -2,31 +2,26 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/price.css">
-    <link rel="stylesheet" href="css/graph.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/line.css">
-    <link rel="stylesheet" href="css/percentage.css" />
-    <link rel="stylesheet" href="css/tables.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/FAQ.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+
     <script>
         window.onload = function () {
             CryptoCharts.priceHistory({
                 chart_id: "chartContainer",
-                loading_indicator: { colors: ["#dc540c", "#dc540c", "#dc540c", "#dc540c"] },
+                loading_indicator: { colors: ["#fff", "#fff", "#fff", "#fff"] },
                 cryptocompare_tickers: ["BTC"],
                 last_days: 90,
                 axes: true,
                 options: {
-                    colors: ["#dc540c"],
+                    colors: ["#fff"],
                     title: {
                         text: "Bitcoin price chart", align: 'left',
                         style: {
-                            color: '#dc540c',
+                            color: '#fff',
                             fontWeight: 'bold',
                             fontSize: '25px'
                         }
@@ -43,61 +38,26 @@
                 }
             });
 
-            CryptoCharts.priceHeatmap({
-                chart_id: "chartContainer2",
-                loading_indicator: { colors: ["#dc540c", "#dc540c", "#dc540c", "#dc540c"] },
-                cryptocompare_tickers: ["BTC"],
-                last_days: 90,
-                axes: true,
-                options: {
-                    colors: ["#dc540c"],
-                    title: {
-                        text: "Bitcoin price range chart", align: 'left',
-                        style: {
-                            color: '#dc540c',
-                            fontWeight: 'bold',
-                            fontSize: '25px'
-                        }
-                    },
-                    subtitle: {
-                        text: 'Last 90 days', align: 'left',
-                        style: {
-                            fontSize: '15px'
-                        }
-                    },
-                    chart: { type: 'area', height: '100%' },
-                    yaxis: { opposite: false },
-
-                }
-            });
         }
     </script>
 </head>
-<body>
+<body class="hero">
 
     <!-- ##################################   NAV SECTION   #################################### -->
 
-    <header id="top-header">
-        <p>
-            <a href="https://tejoncitadel.com/">
-                <img src="images/logo-trans.png" width="195" height="60" class="ml-5 d-inline-block align-top" alt=""
-                    loading="lazy">
+    <div>
+        <nav>
+            <a href="https://tejoncitadel.com/"><img src="images/logo-trans.png" id="logo"  
+                            alt="tejon citadel logo" loading="lazy">
             </a>
-        </p>
-        <p id="name-nav">
-            Tejon Citadel
-           
-        </p>
-        
-        <a href="">
-            <div class="button">Follow on <i class="fa fa-twitter" style="font-size:20px; "></i> </div>
-        </a>
-        <a href="">
-            <div class="button">Purchase <i class="fa fa-btc"></i></div>
-        </a>
+            <ul>
+                <li><a href="">Follow on <i class="fa fa-twitter" style="font-size:20px; "></i></a></li>
+                <li><a href="">Purchase <i class="fa fa-btc"></i></a></li>
+            </ul>
+            <img src="images/moon.png" id="icon"/>
+            </nav>
+    </div>
 
-    </header>
-   
     <!-- ######################################################################################### -->
 
 
@@ -127,34 +87,41 @@
                 <span class="circle circle-right"></span>
             </div>
             <div class="pricing-box-container">
+                <div class="chart-box text-center">
+                    <div class="charty-shell">
+                        <div id="chartContainer"></div>
+                    </div>
+                </div>
                 <div class="pricing-box text-center">
                     <h1> <i class="fa fa-bitcoin fa-lg"></i> <br /> <br /> Bitcoin price
                     </h1>
                     <ul class="features-list">
                         <li>$41,904.97</li>
                     </ul>
-                </div>
-                <div class="pricing-box text-center">
+                    <!-- <hr> -->
+                    <hr>
                     <h1> <i class="fa fa-puzzle-piece fa-lg"></i> <br /> <br /> Total volume</h1>
                     <ul class="features-list">
                         <li>$41,904.97</li>
                         <li> <i class="fas fa-dollar-sign fa-10x "></i></li>
                     </ul>
-                    <i class="fas fa-dollar-sign fa-10x"></i>
+
                 </div>
+                
                 <div class="pricing-box text-center">
                     <h1><i class="fa fa-arrow-up fa-lg"></i> <br /> <br /> All time high (ATH)</h1>
                     <ul class="features-list">
                         <li>$41,904.97</li>
                    </ul>
-                </div>
-                <div class="pricing-box text-center">
-                    <h1><i class="fa fa-caret-up fa-lg"></i> <br /> <br /> Changing ATH</h1>
+                   <hr>
+                   <h1><i class="fa fa-caret-up fa-lg"></i> <br /> <br /> Changing ATH</h1>
                     <ul class="features-list">
                         <li>$41,904.97</li>
                     </ul>
                 </div>
+                             
             </div>
+
             <div class="hl-block">
                 <span class="circle circle-left"></span>
                 <span class="hl"></span>
@@ -170,18 +137,7 @@
     <!--Crypto Charts JavaScript Libraries-->
     <script src="https://cdn.jsdelivr.net/npm/cryptocharts"></script>
 
-    <div class="chart-box-container">
-        <div class="chart-box text-center">
-            <div class="charty-shell">
-                <div id="chartContainer"></div>
-            </div>
-        </div>
-        <div class="chart-box text-center">
-            <div class="charty-shell">
-                <div id="chartContainer2"></div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- ########################################################################################## -->
 
@@ -353,7 +309,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="table-box text-center">
+       <div class="table-box text-center">
             <h3>Network Security</h3>
             <table class="container">
                 <tbody>
@@ -392,7 +348,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="table-box text-center">
+         <div class="table-box text-center">
             <h3>Mining Information</h3>
             <table class="container">
                 <tbody>
@@ -444,537 +400,27 @@
 
 
 
-    <!-- *******************************************   FAQs   ****************************************** -->
-
-    <section class="top-content">
-        <div class="head">
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
-            <h1 class="text-center">FAQs</h1>
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
-        </div>
-    </section>
-    <div class="content-faq">
-         <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>GENERAL QUESTIONS</h3>
-
-        <div>
-            <input type="checkbox" id="question1" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question1" class="question">
-                What is bitcoin?
-            </label>
-            <div class="answers">
-                <p>Bitcoin is a consensus network that enables a new payment system and a completely digital money.
-                    It is the first decentralized peer-to-peer payment network that is powered by its users with no
-                    central authority or middlemen. From a user perspective, Bitcoin is pretty much like cash for
-                    the Internet. Bitcoin can also be seen as the most prominent triple entry bookkeeping system in
-                    existence. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question2" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question2" class="question">
-                Who created bitcoin?
-            </label>
-            <div class="answers">
-                <p>Bitcoin is the first implementation of a concept called "cryptocurrency", which was first described
-                    in 1998 by Wei Dai on the cypherpunks mailing list, suggesting the idea of a new form of money that
-                    uses cryptography to control its creation and transactions, rather than a central authority.
-                    The first Bitcoin specification and proof of concept was published in 2009 in a cryptography
-                    mailing list by Satoshi Nakamoto. Satoshi left the project in late 2010 without revealing much
-                    about himself. The community has since grown exponentially with many developers working on Bitcoin.
-                </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question3" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question3" class="question">
-                Who controls the Bitcoin network?
-            </label>
-            <div class="answers">
-                <p>Nobody owns the Bitcoin network much like no one owns the technology behind email. Bitcoin is
-                    controlled
-                    by all Bitcoin users around the world. While developers are improving the software, they can't force
-                    a
-                    change in the Bitcoin protocol because all users are free to choose what software and version they
-                    use.
-                    In order to stay compatible with each other, all users need to use software complying with the same
-                    rules. Bitcoin can only work correctly with a complete consensus among all users. Therefore, all
-                    users and developers have a strong incentive to protect this consensus. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question4" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question4" class="question">
-                How does Bitcoin work?
-            </label>
-            <div class="answers">
-                <p>From a user perspective, Bitcoin is nothing more than a mobile app or computer program that provides
-                    a personal Bitcoin wallet and allows a user to send and receive bitcoins with them. This is how
-                    Bitcoin works for most users. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question5" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question5" class="question">
-                Is Bitcoin really used by people?
-            </label>
-            <div class="answers">
-                <p>Yes. There are a growing number of businesses and individuals using Bitcoin. This includes
-                    brick-and-mortar
-                    businesses like restaurants, apartments, and law firms, as well as popular online services such as
-                    Namecheap
-                    and Overstock.com. While Bitcoin remains a relatively new phenomenon, it is growing fast. As of May
-                    2018,
-                    the total value of all existing bitcoins exceeded 100 billion US dollars, with millions of dollars
-                    worth
-                    of bitcoins exchanged daily. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question6" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question6" class="question">
-                How does one acquire bitcoins?
-            </label>
-            <div class="answers">
-                <p>While it may be possible to find individuals who wish to sell bitcoins in exchange for a credit card
-                    or
-                    PayPal payment, most exchanges do not allow funding via these payment methods. This is due to cases
-                    where someone buys bitcoins with PayPal, and then reverses their half of the transaction. This is
-                    commonly referred to as a chargeback.
-                </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question7" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question7" class="question">
-                How difficult is it to make a Bitcoin payment?
-            </label>
-            <div class="answers">
-                <p>Bitcoin payments are easier to make than debit or credit card purchases, and can be received without
-                    a merchant account. Payments are made from a wallet application, either on your computer or
-                    smartphone,
-                    by entering the recipient's address, the payment amount, and pressing send. To make it easier to
-                    enter
-                    a recipient's address, many wallets can obtain the address by scanning a QR code or touching two
-                    phones
-                    together with NFC technology. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question8" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question8" class="question">
-                Why do people trust Bitcoin?
-            </label>
-            <div class="answers">
-                <p>Much of the trust in Bitcoin comes from the fact that it requires no trust at all. Bitcoin is fully
-                    open-source and decentralized. This means that anyone has access to the entire source code at any
-                    time.
-                    Any developer in the world can therefore verify exactly how Bitcoin works. All transactions and
-                    bitcoins
-                    issued into existence can be transparently consulted in real-time by anyone. All payments can be
-                    made
-                    without reliance on a third party and the whole system is protected by heavily peer-reviewed
-                    cryptographic
-                    algorithms like those used for online banking. No organization or individual can control Bitcoin,
-                    and the
-                    network remains secure even if not all of its users can be trusted. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question9" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question9" class="question">
-                Can I make money with Bitcoin?
-            </label>
-            <div class="answers">
-                <p>You should never expect to get rich with Bitcoin or any emerging technology. It is always important
-                    to be wary of anything that sounds too good to be true or disobeys basic economic rules. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-
-
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>LEGAL</h3>
-
-        <div>
-            <input type="checkbox" id="question11" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question11" class="question">
-                Is Bitcoin legal?
-            </label>
-            <div class="answers">
-                <p>To the best of our knowledge, Bitcoin has not been made illegal by legislation in most jurisdictions.
-                    However, some jurisdictions (such as Argentina and Russia) severely restrict or ban foreign
-                    currencies.
-                    Other jurisdictions (such as Thailand) may limit the licensing of certain entities such as Bitcoin
-                    exchanges.
-                </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question12" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question12" class="question">
-                Is Bitcoin useful for illegal activities?
-            </label>
-            <div class="answers">
-                <p>Bitcoin is money, and money has always been used both for legal and illegal purposes.
-                    Cash, credit cards and current banking systems widely surpass Bitcoin in terms of their use to
-                    finance crime. Bitcoin can bring significant innovation in payment systems and the benefits of
-                    such innovation are often considered to be far beyond their potential drawbacks.</p>
-                
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question13" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question13" class="question">
-                Can Bitcoin be regulated?
-            </label>
-            <div class="answers">
-                <p>The Bitcoin protocol itself cannot be modified without the cooperation of nearly all its users,
-                    who choose what software they use. Attempting to assign special rights to a local authority in the
-                    rules of the global Bitcoin network is not a practical possibility. Any rich organization could
-                    choose to invest in mining hardware to control half of the computing power of the network and
-                    become able to block or reverse recent transactions. However, there is no guarantee that they
-                    could retain this power since this requires to invest as much than all other miners in the world.
-                </p>
-               
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question14" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question14" class="question">
-                What about Bitcoin and taxes?
-            </label>
-            <div class="answers">
-                <p>Bitcoin is not a fiat currency with legal tender status in any jurisdiction, but often tax liability
-                    accrues regardless of the medium used. There is a wide variety of legislation in many different
-                    jurisdictions which could cause income, sales, payroll, capital gains, or some other form of tax
-                    liability to arise with Bitcoin.</p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question15" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question15" class="question">
-                What about Bitcoin and consumer protection?
-            </label>
-            <div class="answers">
-                <p>Bitcoin is freeing people to transact on their own terms. Each user can send and receive payments
-                    in a similar way to cash but they can also take part in more complex contracts. Multiple signatures
-                    allow a transaction to be accepted by the network only if a certain number of a defined group of
-                    persons agree to sign the transaction. </p>
-
-               
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-      
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>ECONOMY</h3>
-
-        <div>
-            <input type="checkbox" id="question17" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question17" class="question">
-                How are bitcoins created?
-            </label>
-            <div class="answers">
-                <p>New bitcoins are generated by a competitive and decentralized process called "mining".
-                    This process involves that individuals are rewarded by the network for their services.
-                    Bitcoin miners are processing transactions and securing the network using specialized
-                    hardware and are collecting new bitcoins in exchange. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question18" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question18" class="question">
-                Why do bitcoins have value?
-            </label>
-            <div class="answers">
-                <p>Bitcoins have value because they are useful as a form of money. Bitcoin has the characteristic
-                    s of money (durability, portability, fungibility, scarcity, divisibility, and recognizability)
-                    based on the properties of mathematics rather than relying on physical properties (like gold and
-                    silver)
-                    or trust in central authorities (like fiat currencies). In short, Bitcoin is backed by mathematics.
-                    With these attributes, all that is required for a form of money to hold value is trust and adoption.
-                    In the case of Bitcoin, this can be measured by its growing base of users, merchants, and startups.
-                    As with all currency, bitcoin's value comes only and directly from people willing to accept them as
-                    payment. </p>
-                
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-
-
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>TRANSACTIONS</h3>
-
-        <div>
-            <input type="checkbox" id="question19" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question19" class="question">
-                Why do I have to wait for confirmation?
-            </label>
-            <div class="answers">
-                <p>Receiving notification of a payment is almost instant with Bitcoin. However, there is a delay before
-                    the network begins to confirm your transaction by including it in a block. A confirmation means that
-                    there is a consensus on the network that the bitcoins you received haven't been sent to anyone else
-                    and are considered your property. Once your transaction has been included in one block, it will
-                    continue to be buried under every block after it, which will exponentially consolidate this
-                    consensus
-                    and decrease the risk of a reversed transaction. Each confirmation takes between a few seconds and
-                    90
-                    minutes, with 10 minutes being the average. If the transaction pays too low a fee or is otherwise
-                    atypical, getting the first confirmation can take much longer. Every user is free to determine at
-                    what point they consider a transaction sufficiently confirmed, but 6 confirmations is often
-                    considered
-                    to be as safe as waiting 6 months on a credit card transaction.
-                </p>
-                
-            </div>
-        </div>
-
-
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>MINING</h3>
-
-        <div>
-            <input type="checkbox" id="question20" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question20" class="question">
-                What is Bitcoin mining?
-            </label>
-            <div class="answers">
-                <p>Mining is the process of spending computing power to process transactions, secure the network, and
-                    keep everyone in the system synchronized together. It can be perceived like the Bitcoin data center
-                    except that it has been designed to be fully decentralized with miners operating in all countries
-                    and no individual having control over the network. This process is referred to as "mining" as an
-                    analogy to gold mining because it is also a temporary mechanism used to issue new bitcoins.
-                    Unlike gold mining, however, Bitcoin mining provides a reward in exchange for useful services
-                    required to operate a secure payment network. Mining will still be required after the last
-                    bitcoin is issued. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question21" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question21" class="question">
-                How does Bitcoin mining work?
-            </label>
-            <div class="answers">
-                <p>Anybody can become a Bitcoin miner by running software with specialized hardware. Mining software
-                    listens for transactions broadcast through the peer-to-peer network and performs appropriate tasks
-                    to process and confirm these transactions. Bitcoin miners perform this work because they can earn
-                    transaction fees paid by users for faster transaction processing, and newly created bitcoins issued
-                    into existence according to a fixed formula. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question22" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question22" class="question">
-                Isn't Bitcoin mining a waste of energy?
-            </label>
-            <div class="answers">
-                <P>Spending energy to secure and operate a payment system is hardly a waste. Like any other payment
-                    service,
-                    the use of Bitcoin entails processing costs. Services necessary for the operation of currently
-                    widespread
-                    monetary systems, such as banks, credit cards, and armored vehicles, also use a lot of energy.
-                    Although
-                    unlike Bitcoin, their total energy consumption is not transparent and cannot be as easily measured.
-
-                </P>
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question23" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question23" class="question">
-                How does mining help secure Bitcoin?
-            </label>
-            <div class="answers">
-                <p>Mining creates the equivalent of a competitive lottery that makes it very difficult for anyone to
-                    consecutively add new blocks of transactions into the block chain. This protects the neutrality of
-                    the
-                    network by preventing any individual from gaining the power to block certain transactions. This also
-                    prevents any individual from replacing parts of the block chain to roll back their own spends, which
-                    could be used to defraud other users. Mining makes it exponentially more difficult to reverse a past
-                    transaction by requiring the rewriting of all blocks following this transaction.</p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-
-
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>SECURITY</h3>
-
-        <div>
-            <input type="checkbox" id="question24" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question24" class="question">
-                Is Bitcoin secure?
-            </label>
-            <div class="answers">
-                <p>The Bitcoin technology - the protocol and the cryptography - has a strong security track record,
-                    and the Bitcoin network is probably the biggest distributed computing project in the world.
-                    Bitcoin's
-                    most common vulnerability is in user error. Bitcoin wallet files that store the necessary private
-                    keys can be accidentally deleted, lost or stolen. This is pretty similar to physical cash stored in
-                    a
-                    digital form. Fortunately, users can employ sound security practices to protect their money or use
-                    service providers that offer good levels of security and insurance against theft or loss.</p>
-               
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question25" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question25" class="question">
-                Hasn't Bitcoin been hacked in the past?
-            </label>
-            <div class="answers">
-                The rules of the protocol and the cryptography used for Bitcoin are still working years after its
-                inception,
-                which is a good indication that the concept is well designed. However, security flaws have been found
-                and
-                fixed over time in various software implementations. Like any other form of software, the security of
-                Bitcoin
-                software depends on the speed with which problems are found and fixed. The more such issues are
-                discovered,
-                the more Bitcoin is gaining maturity.
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-
-
-
-        <!-- __________________________ SECTIONS ___________________________ -->
-
-        <h3>USING THIS WEBSITE</h3>
-
-        <div>
-            <input type="checkbox" id="question26" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question26" class="question">
-                What are the benefits of registering for an online user account?
-            </label>
-            <div class="answers">
-                <p>We know that your time is very valuable. As a registered user, the time you spend browsing our site
-                    and learning about our products can be saved in your Wish List, and you can create multiple Wish
-                    Lists for future visits. You can also save carts for impending purchases. You can customize the
-                    information that you’d like to receive from Cavendish Square regarding your areas of interest. </p>
-                <p>
-                    Another advantage of being an online user is that you become eligible for exclusive discounts and
-                    generous offers from Cavendish Square.</p>
-                <p>
-                    Register Me Today!
-                </p>
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question27" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question27" class="question">
-                What if I lose my username/password or I cannot log into my account?
-            </label>
-            <div class="answers">
-                <p>If you have entered the correct username/password and you’re still unable to log in, please call
-                    Customer Service at 1-877-980-4450. We will also remind you of your username and password in case
-                    you forget. Otherwise, you can reset your password through our reset portal. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-        <div>
-            <input type="checkbox" id="question28" name="q" class="questions">
-            <div class="plus">+</div>
-            <label for="question28" class="question">
-                Who do I contact with feedback regarding this site?
-            </label>
-            <div class="answers">
-                <p>All comments are welcome. Please submit your feedback, suggestions, or comments here. To read our
-                    privacy policy, please click here. </p>
-
-            </div>
-        </div>
-        <!-- _____________________________________________________ -->
-
-
-
-
-
-
-    </div>
-
-    <!-- ****************************************************************************************************** -->
-
+   
 
 
     <footer id="footer">
         <p>Copyright &copy; 2022 <img src="images/logo-trans.png" alt="logo" width="195" height="60"
                 class="ml-5 d-inline-block align-top" alt="" loading="lazy"> All Rights Reserved.</p>
     </footer>
+
+    <script>
+            var icon = document.getElementById("icon")
+
+            icon.onclick = function () {
+                document.body.classList.toggle("dark-theme")
+                if(document.body.classList.contains("dark-theme")){
+                    icon.src = "images/sun.png";
+                }else {
+                    icon.src = "images/moon.png"
+                }
+            }
+    </script>
+
 </body>
 
 </html>

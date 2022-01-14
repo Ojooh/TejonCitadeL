@@ -1,7 +1,350 @@
-@media only screen and (max-width: 600px) {
+@charset "UTF-8";
+/* Header css */
+
+  * {
+    margin: 0;
+    padding: 0;
+  } 
+
+  #logo {
+    width:195px;
+    cursor: pointer;
+
+  }
+
+  :root {
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+
+    
+  }
+
+  .dark-theme {
+    --primary-color: #000106;
+    --secondary-color: #fff;
+  }
+
+  #icon {
+    width: 30px;
+    cursor: pointer;
+  }
+
+
+  nav ul {
+    flex:1;
+    text-align: right;
+  }
+
+
+  .hero {
+   
+    background: var(--primary-color);
+    font-family: sans-serif;
+    position: relative;
+  }
+
+  nav {
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 100px;
+    cursor: pointer;
+  }
+
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  nav ul li a:hover {
+    color: #FF4321;
+    text-decoration: none;
+  }
+
+
+  /* price css */
+
+
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+    
+  .text-center {
+      text-align: center;
+  }
+  
+  #bitcoin-price {
+      color:black;
+  }
+  
+  .pricing-box-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  
+  /* ##################### */
+  
+  .pricing-box  {
+      background:#dc540c;
+      box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+      border-radius: 4px;
+      flex: 1;
+      padding: 0 30px 30px;
+      margin: 2%;
+      min-width: 250px;
+      max-width: 350px;
+    }
+    
+    .pricing-box:hover, .pricing-box:focus {
+      background:rgb(255, 140, 0);
+      
+    }
+    
+    
+  
+  /* ###################### */
+  
+  
+  .pricing-box h1 {
+      text-transform: uppercase;
+      color: white;
+      font-size: 20px;
+  }
+  
+  .price {
+      margin: 24px 0;
+      font-size: 36px;
+      font-weight: 900;
+  }
+  
+  .price sub, .price sup {
+      font-size: 16px;
+      font-weight: 100;
+  }
+  
+  .features-list {
+      padding: 0;
+      list-style-type: none;
+  }
+  
+  .features-list li {
+      font-weight: 100;
+      padding: 12px 0;
+      font-weight: 100;
+      font-size: 25px;
+      color: white;
+  }
+  
+  .features-list li:not(:last-of-type) {
+      /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  }
+  
+  .btn-primary {
+      border-radius: 25px;
+      border: none;
+      background-color: #EC1362;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 10px 15px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      transition: all 0.1s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+      box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+      transform: translateY(-3px);
+  }
+  
+  .pricing-box-bg-image {
+      /* background-image: url('https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80'); */
+      background-image: url('bg1.png');
+      background-size: cover;
+      background-position: center center;
+      /* color: #ffffff; */
+      color: black;
+  
+  }
+  
+  .pricing-box-bg-image .features-list li {
+      border-bottom-color: rgba(255, 255, 255, 1);
+  }
+  
+  .pricing-box-bg-image .btn-primary {
+      background-color: #ffffff;
+      color: #000;
+  }
+  
+  footer {
+      background-color: #222;
+      color: #fff;
+      font-size: 14px;
+      bottom: 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      text-align: center;
+  }
+  
+  footer p {
+      margin: 10px 0;
+  }
+  
+  footer i {
+      color: red;
+  }
+  
+  footer a {
+      color: #3C97BF;
+      text-decoration: none;
+  }
+  
+  #icon-key {
+      bottom: 0 !important;
+      right: 0 !important;
+  }
+
+
+  /* graph css  */
+
+  #chartContainer{
+    margin-left: 30px;
+}
+
+.charty-shell {
+    max-height: 400px;
+    height: 400px; 
+    width:100%;
+   
+}
+.pull-left {
+    width: 50%;
+}
+
+
+.chart-box  {
+/* background:#1F2739; */
+background: #dc540c;
+box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+flex: 1;
+padding: 0 30px 30px;
+margin: 2%; 
+min-width: 50%;
+max-width: 50%;
+}
+
+
+.chart-box-container {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+#company-economy {
+    color: var(--primary-color);
+}
+
+
+/* percentage css */
+
+.flex-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+  }
+  
+  .single-chart {
+	width: 33%;
+	justify-content: space-around ;
+	 background: var(--secondary-color);
+	box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+	border-radius: 4px;
+	flex: 1;
+	padding: 0 30px 100px;
+	margin: 2%;
+	min-width: 250px;
+	max-width: 350px;
+  }
+  
+  .circular-chart {
+	display: block;
+	margin: 10px auto;
+	max-width: 80%;
+	max-height: 250px;
+  }
+  
+  .circle-bg {
+	fill: none;
+	stroke: #eee;
+	stroke-width: 3.8;
+  }
+  
+  .circle {
+	fill: none;
+	stroke-width: 2.8;
+	stroke-linecap: round;
+	animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+	0% {
+	  stroke-dasharray: 0 100;
+	}
+  }
+  
+  .circular-chart.orange .circle {
+	stroke: #ff9f00;
+  }
+  
+  .circular-chart.green .circle {
+	stroke: #4CC790;
+  }
+  
+  .circular-chart.blue .circle {
+	stroke: #3c9ee5;
+  }
+  .circular-chart.light-blue .circle {
+	stroke: #5eb3e1;
+  }
+  .circular-chart.red .circle {
+	stroke: #f7294b;
+  }
+  
+  .percentage {
+	fill: #666;
+	font-family: sans-serif;
+	font-size: 0.5em;
+	text-anchor: middle;
+  }
+  
+
+  .text-center h1 {
+	  padding-bottom: 30px;
+	  padding-top: 20px;
+  }
+
+
+  /* line css */
+
+
+  @media only screen and (max-width: 600px) {
     .top-content {
         text-align: center;
-        /* height:100px; */
     }
     .top-content .text-center {
         color: #dc540c;
@@ -14,7 +357,7 @@
     .head .hl {
         width: 230px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 4px;
@@ -23,7 +366,7 @@
     .head .circle-left {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -33,7 +376,7 @@
     .head .circle-right {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -47,7 +390,7 @@
     .vl {
         height: 140px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 10px;
@@ -56,7 +399,7 @@
     .content-top .circle-left {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -66,7 +409,7 @@
     .content-top .circle-right {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -80,7 +423,7 @@
     .content-top .hl {
         width: 270px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 6px;
@@ -94,7 +437,7 @@
     .circle-top {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -105,7 +448,7 @@
     .circle-bottom {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -116,7 +459,7 @@
     .vl-start {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         top: 13px;
@@ -125,7 +468,7 @@
     .vl-end {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 13px;
@@ -214,7 +557,7 @@
     .head .hl {
         width: 220px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 4px;
@@ -223,7 +566,7 @@
     .head .circle-left {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -233,7 +576,7 @@
     .head .circle-right {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -247,7 +590,7 @@
     .vl {
         height: 140px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 10px;
@@ -256,7 +599,7 @@
     .content-top .circle-left {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -266,7 +609,7 @@
     .content-top .circle-right {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -280,7 +623,7 @@
     .content-top .hl {
         width: 700px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 6px;
@@ -294,7 +637,7 @@
     .circle-top {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -305,7 +648,7 @@
     .circle-bottom {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -316,7 +659,7 @@
     .vl-start {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         top: 13px;
@@ -325,7 +668,7 @@
     .vl-end {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 13px;
@@ -348,7 +691,7 @@
     .head .hl {
         width: 300px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 4px;
@@ -357,7 +700,7 @@
     .head .circle-left {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -367,7 +710,7 @@
     .head .circle-right {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -381,7 +724,7 @@
     .vl {
         height: 140px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 10px;
@@ -390,7 +733,7 @@
     .content-top .circle-left {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -400,7 +743,7 @@
     .content-top .circle-right {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -414,7 +757,7 @@
     .content-top .hl {
         width: 900px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 6px;
@@ -428,7 +771,7 @@
     .circle-top {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -439,7 +782,7 @@
     .circle-bottom {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -450,7 +793,7 @@
     .vl-start {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         top: 13px;
@@ -459,7 +802,7 @@
     .vl-end {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 13px;
@@ -483,7 +826,7 @@
     .head .hl {
         width: 400px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 4px;
@@ -492,7 +835,7 @@
     .head .circle-left {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -506,7 +849,7 @@
     .circle-top {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -520,7 +863,7 @@
     .circle-bottom {
         height: 30px;
         width: 30px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -535,7 +878,7 @@
     .head .circle-right {
         height: 10px;
         width: 10px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -553,7 +896,7 @@
     .vl {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 10px;
@@ -562,7 +905,7 @@
     .vl-start {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         top: 13px;
@@ -571,7 +914,7 @@
     .vl-end {
         height: 60px;
         width: 1px;
-        border-left: 2px solid black;
+        border-left: 2px solid  var(--secondary-color);
         left: 50%;
         position: relative;
         bottom: 13px;
@@ -580,7 +923,7 @@
     .content-top .circle-left {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -594,7 +937,7 @@
     .content-top .circle-right {
         height: 15px;
         width: 15px;
-        border: 2px solid black;
+        border: 2px solid  var(--secondary-color);
         border-radius: 50%;
         display: inline-block;
         position: relative;
@@ -612,7 +955,7 @@
     .content-top .hl {
         width: 1200px;
         height: 1px;
-        border-top: 2px solid black;
+        border-top: 2px solid  var(--secondary-color);
         display: inline-block;
         position: relative;
         bottom: 6px;
@@ -663,3 +1006,163 @@
         }
     }
 }
+
+
+/* table css */
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+ body {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   line-height: 1.42em;
+   color:#A7A1AE;
+   background-color: white;
+ }
+ 
+ h1 {
+   font-size:3em; 
+   font-weight: 300;
+   line-height:1em;
+   text-align: center;
+   color: #4DC3FA;
+ }
+ 
+ h2 {
+   font-size:1em; 
+   font-weight: 300;
+   text-align: center;
+   display: block;
+   line-height:1em;
+   padding-bottom: 2em;
+   color: #FB667A;
+ }
+ 
+ h2 a {
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #FB667A;
+   text-decoration: none;
+ }
+ 
+ .blue { color: #185875; }
+ .yellow { color: rgb(255, 140, 0); }
+ 
+ .container th h1 {
+       font-weight: bold;
+       font-size: 1.2em;
+   text-align: left;
+   color: #185875;
+ }
+ 
+ .container td {
+       font-weight: normal;
+       font-size: 1em;
+   -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+        -moz-box-shadow: 0 2px 2px -2px #0E1119;
+             box-shadow: 0 2px 2px -2px #0E1119;
+ }
+ 
+ .table-box-container {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+    padding-bottom: 200px;
+ }
+ .table-box  {
+    flex: 1;
+    margin: 2%;
+    min-width: 20%;
+    max-width: 50%;
+  }
+ 
+ .container td, .container th {
+       padding-bottom: 2%;
+       padding-top: 2%;
+       padding-left:2%;  
+ }
+ 
+ /* Background-color of the odd rows */
+ .container tr:nth-child(odd) {
+       background-color: #323C50;
+ }
+ 
+ /* Background-color of the even rows */
+ .container tr:nth-child(even) {
+       background-color: #2C3446;
+ }
+ 
+ .container th {
+       background-color: #1F2739;
+ }
+ 
+ .container td:first-child { color: #FB667A; }
+ 
+ .container tr:hover {
+    background-color: #464A52;
+ -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+        -moz-box-shadow: 0 6px 6px -6px #0E1119;
+             box-shadow: 0 6px 6px -6px #0E1119;
+ }
+ 
+ .container td:hover {
+   background-color: rgb(255, 140, 0);
+   color: #403E10;
+   font-weight: bold;
+   
+   box-shadow: #cc721d -1px 1px, #e6914c -2px 2px, #ec832d -3px 3px, #ee6a2d -4px 4px, #ca630f -5px 5px, #e69057 -6px 6px;
+   transform: translate3d(6px, -6px, 0);
+   
+   transition-delay: 0s;
+       transition-duration: 0.4s;
+       transition-property: all;
+   transition-timing-function: line;
+ }
+ 
+ @media (max-width: 800px) {
+ .container td:nth-child(4),
+ .container th:nth-child(4) { display: none; }
+ .table-box  {
+ 
+        flex: 1;
+        margin: 2%;
+        min-width: 50%;
+        max-width: 50%;
+        }
+  
+  
+  .table-box-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+  
+  }
+ }
+
+ 
+  
+  #general-info {
+    color: black;
+  }
+
+
+/* fotter css */
+
+#footer img {
+    max-width: 100%;
+    height: auto;
+}
+       
+#footer p {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#footer img {
+    width: 44px;
+}
+

@@ -23,6 +23,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	/* width: 30%; */
 }
 
 
@@ -41,7 +42,8 @@
   }
   
   .pricing-box:hover, .pricing-box:focus {
-    background:#f4b347;
+    background:darkorange;
+	/* color: #dc540c; */
 	/* background: linear-gradient(to right bottom, #dc540c 50%, #f4b347 50%); */
   }
   
@@ -53,6 +55,7 @@
 .pricing-box h1 {
 	text-transform: uppercase;
     color: white;
+	font-size: 20px;
 }
 
 .price {
@@ -75,7 +78,7 @@
 	font-weight: 100;
 	padding: 12px 0;
 	font-weight: 100;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
 }
 
