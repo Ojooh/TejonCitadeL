@@ -95,13 +95,13 @@
                     <h1> <i class="fa fa-bitcoin fa-lg"></i> <br /> <br /> Bitcoin price
                     </h1>
                     <ul class="features-list">
-                        <li>$41,904.97</li>
+                        <li id="price-id"></li>
                     </ul>
                     <!-- <hr> -->
                     <hr>
                     <h1> <i class="fa fa-puzzle-piece fa-lg"></i> <br /> <br /> Total volume</h1>
                     <ul class="features-list">
-                        <li>$41,904.97</li>
+                        <li id="volume-id"></li>
                         <li> <i class="fas fa-dollar-sign fa-10x "></i></li>
                     </ul>
 
@@ -110,12 +110,12 @@
                 <div class="pricing-box text-center">
                     <h1><i class="fa fa-arrow-up fa-lg"></i> <br /> <br /> All time high (ATH)</h1>
                     <ul class="features-list">
-                        <li>$41,904.97</li>
+                        <li id="ath-id"></li>
                    </ul>
                    <hr>
                    <h1><i class="fa fa-caret-up fa-lg"></i> <br /> <br /> Changing ATH</h1>
                     <ul class="features-list">
-                        <li>$41,904.97</li>
+                        <li id="change-id"></li>
                     </ul>
                 </div>
                              
@@ -227,40 +227,41 @@
             <table class="container">
                 <tbody>
                     <tr>
-                        <td>$1.00 </td>
-                        <td>0.00002449 BTC</td>
+                        <td id="dollarAmt1">$1.00 </td>
+                        <!-- <td id="bitcoinAmt1">0.00002449 BTC</td> -->
+                        <td id="bitcoinAmt1"></td>
                    </tr>
                     <tr>
-                        <td>$10</td>
-                        <td>0.00024493 BTC</td>
+                        <td id="dollarAmt2">$10</td>
+                        <td id="bitcoinAmt2"></td>
                     </tr>
                     <tr>
-                        <td>$100</td>
-                        <td>0.00245053 BTC</td>
+                        <td id="dollarAmt3">$100</td>
+                        <td id="bitcoinAmt3"></td>
                     </tr>
                     <tr>
-                        <td>$1k</td>
-                        <td>0.02450526 BTC</td>
+                        <td id="dollarAmt4">$1K</td>
+                        <td id="bitcoinAmt4"></td>
                     </tr>
                     <tr>
-                        <td>$10k</td>
-                        <td>0.24505263 BTC</td>
+                        <td id="dollarAmt5">$10K</td>
+                        <td id="bitcoinAmt5"></td>
                     </tr>
                     <tr>
-                        <td>$100k</td>
-                        <td>2.45052632 BTC</td>
+                        <td id="dollarAmt6">$100K</td>
+                        <td id="bitcoinAmt6"></td>
                     </tr>
                     <tr>
-                        <td>$1M</td>
-                        <td>24.50526324 BTC</td>
+                        <td id="dollarAmt7">$1M</td>
+                        <td id="bitcoinAmt7"></td>
                     </tr>
                     <tr>
-                        <td>$10M</td>
-                        <td>245.05263240 BTC</td>
+                        <td id="dollarAmt8">$10M</td>
+                        <td id="bitcoinAmt8"></td>
                     </tr>
                     <tr>
-                        <td>$100M</td>
-                        <td>2450.52632404 BTC</td>
+                        <td id="dollarAmt9">$100M</td>
+                        <td id="bitcoinAmt9"></td>
                     </tr>
                 </tbody>
             </table>
@@ -295,15 +296,18 @@
                     </tr>
                     <tr>
                         <td>Bitcoin.org web rank</td>
-                        <td>34578 alexa score</td>
+                        <!-- <td id="alexa_score">34578 alexa score</td> -->
+                        <td id="alexa_score"></td>
                     </tr>
                     <tr>
                         <td>Sentiment up score</td>
-                        <td>62.850%( CoinGecko)</td>
+                        <!-- <td id="sentiment-up">62.850%( CoinGecko)</td> -->
+                        <td id="sentiment-up">( CoinGecko)</td>
                     </tr>
                     <tr>
                         <td>Sentiment down score</td>
-                        <td>37.150% ( CoinGecko)</td>
+                        <!-- <td id="sentiment-down">37.150% ( CoinGecko)</td> -->
+                        <td id="sentiment-down"> ( CoinGecko)</td>
                     </tr>
                 </tbody>
             </table>
@@ -418,6 +422,230 @@
                     icon.src = "images/moon.png"
                 }
             }
+
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            function roundNumber(num){
+                (Math.round(num * 100) / 100).toFixed(2);
+            }
+            Number.prototype.toFixedNoRound = function(){
+                const factor = Math.pow(10, 1);
+                return Math.floor(this * factor)/factor;
+            }
+
+            function toFixedNoRound(value) {
+                const factor = Math.pow(10, 1);
+                let result = (value / 1000000000);
+                result =  Math.floor(result * factor)/factor;
+                result = result + 'B';
+                return result;
+         
+            }
+            async function getPrice() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.market_data.current_price.usd;
+            }
+            getPrice().then(data => 
+            {
+                document.getElementById('price-id').innerHTML = "$" + numberWithCommas(data);
+                console.log(data)
+            });
+
+            async function getAth() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.market_data.ath.usd;
+            }
+            getAth().then(data => 
+            {
+                document.getElementById('ath-id').innerHTML = "$" + numberWithCommas(data);
+                console.log(data)
+            });
+
+            async function getChange() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.market_data.ath_change_percentage.usd;
+            }
+            getChange().then(data => 
+            {
+                document.getElementById('change-id').innerHTML = "$" + (Math.round(data * 100) / 100).toFixed(2);
+                console.log(data)
+
+                console.log((Math.round(-37.87058 * 100) / 100).toFixed(2))
+            });
+
+            async function getVolume() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.market_data.total_volume.usd;
+            }
+            getVolume().then(data => 
+            {
+                document.getElementById('volume-id').innerHTML = "$" + toFixedNoRound(data);
+                console.log(data)
+            });
+
+            function calc(num) {
+                var with8Decimals = num.toString().match(/^-?\d+(?:\.\d{0,8})?/)[0]
+                return with8Decimals
+            }
+            
+            function abTonu(value) {
+                let price = value.replace(/\$/g, '');
+                let num = price.substring(0, price.length - 1);
+                console.log(price)
+
+                var lastPriceValue=price.slice(-1);//d
+                if (lastPriceValue === 'K'){
+                    return num * 1000;
+                }
+                if (lastPriceValue === 'M'){
+                    return num * 1000000
+                }
+            }
+            
+            abTonu(document.getElementById('dollarAmt5').innerHTML)
+
+            async function usdToBtc() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                let price = data.market_data.current_price.usd;
+                return data.market_data.current_price.usd;
+            }
+            usdToBtc().then(data => 
+            {
+                let id=1;
+                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
+                console.log("type " + typeof dollar)
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=2;
+                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=3;
+                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=4;
+                
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=5;
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=6;
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=7;
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=8;
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            usdToBtc().then(data => 
+            {
+                let id=9;
+                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
+                let dollar = abTonu(dollar1);
+                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
+                console.log(btc + "id is " + id);
+
+            });
+            
+            // sentiment-up
+            async function getSentimentUp() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.sentiment_votes_up_percentage;
+            }
+            getSentimentUp().then(data => 
+            {
+                document.getElementById('sentiment-up').innerHTML = data + "%( CoinGecko)";
+                console.log(data)
+            });
+            async function getSentimentDown() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.sentiment_votes_down_percentage;
+            }
+            getSentimentDown().then(data => 
+            {
+                document.getElementById('sentiment-down').innerHTML = data + "%( CoinGecko)";
+                console.log(data)
+            });
+            async function getAlexaScore() {
+                let response = await fetch(
+                "https://api.coingecko.com/api/v3/coins/bitcoin/"
+                );
+                let data = await response.json();
+                return data.public_interest_stats.alexa_rank;
+            }
+            getAlexaScore().then(data => 
+            {
+                document.getElementById('alexa_score').innerHTML = data + " alexa score ";
+                console.log(data)
+            });
+
+            
     </script>
 
 </body>
