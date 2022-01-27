@@ -13,15 +13,20 @@
   }
 
   :root {
-    --primary-color: #edf2fc;
-    --secondary-color: #212121;
+    /* --primary-color: #edf2fc;
+    --secondary-color: #212121; */
 
+    --primary-color: #000106;
+    --secondary-color: #fff;
     
   }
 
   .dark-theme {
-    --primary-color: #323433;
-    --secondary-color: #fff;
+    /* --primary-color: #000106;
+    --secondary-color: #fff; */
+
+    --primary-color: #edf2fc;
+    --secondary-color: #212121; 
   }
 
   #icon {
@@ -99,7 +104,9 @@
   /* ##################### */
   
   .pricing-box  {
-      background:#dc540c;
+      
+
+      background:#1a1a1a    ;
       box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
       border-radius: 4px;
       flex: 1;
@@ -110,7 +117,9 @@
     }
     
     .pricing-box:hover, .pricing-box:focus {
-      background:rgb(255, 140, 0);
+
+        box-shadow: 0px 2px 25px 0px #dc540c;
+     /* background:rgb(255, 140, 0);*/
       
     }
     
@@ -121,8 +130,8 @@
   
   .pricing-box h1 {
       text-transform: uppercase;
-      color: white;
-      font-size: 20px;
+      color: #dc540c;
+      font-size: 30px;
   }
   
   .price {
@@ -145,7 +154,7 @@
       font-weight: 100;
       padding: 12px 0;
       font-weight: 100;
-      font-size: 25px;
+      font-size: 40px;
       color: white;
   }
   
@@ -162,7 +171,7 @@
       padding: 10px 15px;
       margin-top: 20px;
       text-transform: uppercase;
-      transition: all 0.1s ease-in-out;
+      transition: all 1s ease-in-out;
   }
   
   .btn-primary:hover {
@@ -238,10 +247,12 @@
 
 .chart-box  {
 /* background:#1F2739; */
-background: #dc540c;
-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+/*background: #dc540c;*/
+
+box-shadow: 0px 0px 20px 0px #ffffff50;
+border-radius: 10px;
 flex: 1;
-padding: 0 30px 30px;
+padding: 50px !important;
 margin: 2%; 
 min-width: 50%;
 max-width: 50%;
@@ -256,7 +267,6 @@ flex-wrap: wrap;
 }
 #company-economy {
     color: var(--primary-color);
-    font-size: 26px;
 }
 
 
@@ -270,6 +280,7 @@ flex-wrap: wrap;
   }
   
   .single-chart {
+      background-color: #0E1119;
 	width: 33%;
 	justify-content: space-around ;
 	 background: var(--secondary-color);
@@ -280,14 +291,17 @@ flex-wrap: wrap;
 	margin: 2%;
 	min-width: 250px;
 	max-width: 350px;
-    height:350px;
   }
   
+  .chart-naranja:hover{
+    box-shadow: 0px 2px 25px 0px #dc540c;
+  }
+
   .circular-chart {
 	display: block;
 	margin: 10px auto;
 	max-width: 80%;
-	max-height: 200px;
+	max-height: 250px;
   }
   
   .circle-bg {
@@ -326,9 +340,20 @@ flex-wrap: wrap;
   .circular-chart.red .circle {
 	stroke: #f7294b;
   }
+
+  .circular-chart.naranja .circle{
+      stroke: #dc540c;
+  }
   
   .percentage {
-	fill: var(--primary-color);
+	fill: #666;
+	font-family: sans-serif;
+	font-size: 0.5em;
+	text-anchor: middle;
+  }
+  
+  .percentage-2 {
+	fill: whitesmoke;
 	font-family: sans-serif;
 	font-size: 0.5em;
 	text-anchor: middle;
@@ -1165,6 +1190,7 @@ flex-wrap: wrap;
   #general-info {
     color: black;
   }
+
 
 
 /* fotter css */

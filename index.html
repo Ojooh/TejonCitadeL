@@ -1,26 +1,26 @@
-<html>
+<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
 
     <script>
         window.onload = function () {
             CryptoCharts.priceHistory({
                 chart_id: "chartContainer",
-                loading_indicator: { colors: ["#fff", "#fff", "#fff", "#fff"] },
+                loading_indicator: { colors: ["#f2a900", "#f2a900", "#f2a900", "#f2a900"] },
                 cryptocompare_tickers: ["BTC"],
                 last_days: 90,
                 axes: true,
                 options: {
-                    colors: ["#fff"],
+                    colors: ["#f2a900"],
                     title: {
                         text: "Bitcoin price chart", align: 'left',
                         style: {
-                            color: '#fff',
+                            color: '#edf2fc',
                             fontWeight: 'bold',
                             fontSize: '25px'
                         }
@@ -32,118 +32,117 @@
                         }
                     },
                     chart: { type: 'line', height: '100%' },
-                    yaxis: { opposite: false },
-
+                    yaxis: { opposite: true }
                 }
             });
-
         }
     </script>
 </head>
-<body class="hero">
+
+<body class="hero" >
 
     <!-- ##################################   NAV SECTION   #################################### -->
 
     <div>
         <nav>
-            <a href="https://tejoncitadel.com/"><img src="images/logo-trans.png" id="logo"  
-                            alt="tejon citadel logo" loading="lazy">
+            <a href="https://tejoncitadel.com/"><img src="images/logo-trans.png" id="logo" alt="tejon citadel logo"
+                    loading="lazy">
             </a>
             <ul>
                 <li><a href="">Follow on <i class="fa fa-twitter" style="font-size:20px; "></i></a></li>
                 <li><a href="">Purchase <i class="fa fa-btc"></i></a></li>
             </ul>
-            <img src="images/moon.png" id="icon"/>
-            </nav>
+            <!-- <img src="images/sun.png" id="icon" />  for toggling between darkk/light theme-->
+        </nav>
     </div>
 
     <!-- ######################################################################################### -->
 
 
-    <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   BITCOIN PRICE DATA   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <!-- ##################################   BITCOIN PRICE DATA   ################################## -->
 
     <section class="top-content">
-        <div class="circle-top"></div>
-        <div class="vl-start"></div>
-        <div class="head">
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
+        
+          
             <h1 class="text-center">Bitcoin price data</h1>
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
+            
         </div>
-        <div class="vl"></div>
+       
         <div class="content-top">
-            <div class="hl-block upper-content-hl">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
+           
             <div class="pricing-box-container">
-                <div class="chart-box text-center">
+                <div class="chart-box text-center" style="width: 50%  ;">
                     <div class="charty-shell">
                         <div id="chartContainer"></div>
                     </div>
                 </div>
+            </div>
+            <div style="display: flex;flex-wrap: wrap;">
                 <div class="pricing-box text-center">
                     <h1> <i class="fa fa-bitcoin fa-lg"></i> <br /> <br /> Bitcoin price
                     </h1>
                     <ul class="features-list">
+                        <br>
+                        <br>
                         <li id="price-id"></li>
                     </ul>
-                    <!-- <hr> -->
                     <hr>
-                    <h1> <i class="fa fa-puzzle-piece fa-lg"></i> <br /> <br /> Total volume</h1>
-                    <ul class="features-list">
-                        <li id="volume-id"></li>
-                        <li> <i class="fas fa-dollar-sign fa-10x "></i></li>
-                    </ul>
-
                 </div>
-                
+                <div class="pricing-box text-center">
+                    <h1> <i class="fa fa-line-chart fa-lg"></i> <br /> <br /> Total volume</h1>
+                    <ul class="features-list">
+                        <br>
+                        <br>
+                        <li id="volume-id"></li>                        
+                    </ul>
+                    <hr>
+                </div>
                 <div class="pricing-box text-center">
                     <h1><i class="fa fa-arrow-up fa-lg"></i> <br /> <br /> All time high (ATH)</h1>
                     <ul class="features-list">
+                        <br>
                         <li id="ath-id"></li>
-                   </ul>
-                   <hr>
-                   <h1><i class="fa fa-caret-up fa-lg"></i> <br /> <br /> Changing ATH</h1>
-                    <ul class="features-list">
-                        <li id="change-id"></li>
                     </ul>
+                    <hr>
                 </div>
-                             
+                    <div class="single-chart text-center  chart-naranja"  style="  background-color: #1a1a1a; color: whitesmoke  !important;padding-bottom: 5px !important;">
+                        <h1 style="font-size: 30px; color: #dc540c;" id="company-economy">CIRCULATING SUPPLY</h1>
+                        <svg viewBox="-10 0 54 54" class="circular-chart naranja">
+                            <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="20" y="20.35" class="percentage-2">90%</text>
+                        </svg>
+                    </div>
+                    <hr>
+               
+
             </div>
 
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
+          
         </div>
-        <div class="vl-end"></div>
-        <div class="circle-bottom"></div>
+     
+
     </section>
 
-    <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <!-- ######################################################################################### -->
     <!-- #####################################   CHART SECTION   ################################### -->
     <!--Crypto Charts JavaScript Libraries-->
     <script src="https://cdn.jsdelivr.net/npm/cryptocharts"></script>
 
-   
+
 
     <!-- ########################################################################################## -->
 
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   PERCENTAGE SECTION   ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--##################################   PERCENTAGE SECTION (NO NEED IT FOR THE MOMENT)  ################################## -->
 
+    <script>
+    /*  
     <div class="flex-wrapper">
-        <div class="single-chart text-center">
+        <div class="single-chart text-center" style="  background-color: #0E1119; color: whitesmoke  !important;">
             <h1 id="company-economy">Profit</h1>
             <svg viewBox="0 0 36 36" class="circular-chart light-blue">
                 <path class="circle-bg" d="M18 2.0845
@@ -155,7 +154,7 @@
                 <text x="18" y="20.35" class="percentage">85%</text>
             </svg>
         </div>
-        <div class="single-chart text-center">
+        <div class="single-chart text-center" style="  background-color: #0E1119">
             <h1 id="company-economy">No. of visits</h1>
             <svg viewBox="0 0 36 36" class="circular-chart orange">
                 <path class="circle-bg" d="M18 2.0845
@@ -168,7 +167,7 @@
             </svg>
         </div>
 
-        <div class="single-chart text-center">
+        <div class="single-chart text-center" style="  background-color: #0E1119">
             <h1 id="company-economy">Customers</h1>
             <svg viewBox="0 0 36 36" class="circular-chart green">
                 <path class="circle-bg" d="M18 2.0845
@@ -181,7 +180,7 @@
             </svg>
         </div>
 
-        <div class="single-chart text-center">
+        <div class="single-chart text-center" style="  background-color: #0E1119">
             <h1 id="company-economy">Sales</h1>
             <svg viewBox="0 0 36 36" class="circular-chart red">
                 <path class="circle-bg" d="M18 2.0845
@@ -193,24 +192,21 @@
                 <text x="18" y="20.35" class="percentage">53%</text>
             </svg>
         </div>
-    </div>
+    </div>*/
+</script>
 
 
+    <!-- ######################################################################################### -->
 
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ##################################   BITCOIN STATISTICS   ################################## -->
 
-    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   BITCOIN STATISTICS   $$$$$$$$$$$$$$$$$$$$$$ -->
-
-
+    <br>
+    <br>
     <section class="top-content">
-        <div class="circle-top"></div>
-        <div class="vl-start"></div>
+        
+        
         <div class="head">
-            <div class="hl-block">
-                <span class="circle circle-left"></span>
-                <span class="hl"></span>
-                <span class="circle circle-right"></span>
-            </div>
+          
             <h1 class="text-center">Bitcoin statistics</h1>
             <div class="hl-block">
                 <span class="circle circle-left"></span>
@@ -218,9 +214,10 @@
                 <span class="circle circle-right"></span>
             </div>
         </div>
-        <div class="vl-end"></div>
-        <div class="circle-bottom"></div>
+        
+        
     </section>
+
     <div class="table-box-container">
         <div class="table-box text-center">
             <h3>Bitcoin price</h3>
@@ -228,7 +225,6 @@
                 <tbody>
                     <tr>
                         <td id="dollarAmt1">$1.00 </td>
-                        <!-- <td id="bitcoinAmt1">0.00002449 BTC</td> -->
                         <td id="bitcoinAmt1"></td>
                    </tr>
                     <tr>
@@ -267,247 +263,197 @@
             </table>
         </div>
         <div class="table-box text-center">
-            <h3> Bitcoin Network</h3>
+            <h3> Bitcoin Market Data</h3>
             <table class="container">
                 <tbody>
                     <tr>
-                        <td>Tejoncitadel</td>
-                        <td>Blockcypher</td>
+                        <td>Market Cap</td>
+                        <td id="market_cap"></td>
                     </tr>
                     <tr>
-                        <td>Nodes Found</td>
-                        <td>4,000</td>
+                        <td>Market Cap Rank</td>
+                        <td id="rank"></td>
                     </tr>
                     <tr>
-                        <td>Tejon Reachability</td>
-                        <td>Yes</td>
+                        <td>High 24H</td>
+                        <td id="high-24h"></td>
                     </tr>
                     <tr>
-                        <td>Miners active</td>
-                        <td>Yes</td>
+                        <td>Low 24H</td>
+                        <td id="low-24h"></td>
                     </tr>
                     <tr>
-                        <td>Unique wallets found</td>
-                        <td>943,302,778</td>
+                        <td>Price Change 24H</td>
+                        <td id="change-24h"></td>
                     </tr>
                     <tr>
-                        <td>Zero Balance wallets</td>
-                        <td>904,163,395</td>
+                        <td>Circulatory Supply</td>
+                        <td id="circulatory"></td>
                     </tr>
                     <tr>
-                        <td>Bitcoin.org web rank</td>
-                        <!-- <td id="alexa_score">34578 alexa score</td> -->
-                        <td id="alexa_score"></td>
+                        <td>Total Supply</td>
+                        <td id="tot-supply"></td>
                     </tr>
                     <tr>
-                        <td>Sentiment up score</td>
-                        <!-- <td id="sentiment-up">62.850%( CoinGecko)</td> -->
-                        <td id="sentiment-up">( CoinGecko)</td>
+                        <td>Maximum Supply</td>
+                        <td id="max-supply"></td>
                     </tr>
                     <tr>
-                        <td>Sentiment down score</td>
-                        <!-- <td id="sentiment-down">37.150% ( CoinGecko)</td> -->
-                        <td id="sentiment-down"> ( CoinGecko)</td>
+                        <td>ATH Change</td>
+                        <td id="ath-change"> </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-       <div class="table-box text-center">
-            <h3>Network Security</h3>
+        <div class="table-box text-center">
+            <h3>Bitcoin Network</h3>
             <table class="container">
                 <tbody>
                     <tr>
-                        <td>Mining Algotithm </td>
-                        <td>SHA-256</td>
+                        <td>Hashing Algotithm </td>
+                        <td id="hash-alg"></td>
                     </tr>
                     <tr>
-                        <td>Hash Rate </td>
-                        <td>178.8 EH/S</td>
+                        <td>Block Time </td>
+                        <td id="block-time"></td>
                     </tr>
                     <tr>
-                        <td>24H Mining Rev. (BTC)</td>
-                        <td>888.79621252 BTC</td>
+                        <td>Genesis Date</td>
+                        <td id="genesis-date"></td>
                     </tr>
                     <tr>
-                        <td>Bitcoin Dominance</td>
-                        <td>Avoid This Metic</td>
+                        <td>Sentiment Up Score</td>
+                        <td id="sentiment-up"></td>
                     </tr>
                     <tr>
-                        <td>Supply Still Capped @ 21M?</td>
-                        <td>TRUE</td>
+                        <td>Sentiment Down Score</td>
+                        <td id="sentiment-down"></td>
                     </tr>
                     <tr>
-                        <td>Victim of 51% Attack?</td>
-                        <td>FALSE</td>
+                        <td>Coingecko Score</td>
+                        <td id="coingecko-score"></td>
                     </tr>
                     <tr>
-                        <td>Last TX Double-spent?</td>
-                        <td>FALSE</td>
-                    </tr>
-                    <tr>
-                        <td>Network Health</td>
-                        <td>14,987 Nodes Found</td>
+                        <td>Public Interest Score</td>
+                        <td id="interest-score"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-         <div class="table-box text-center">
-            <h3>Mining Information</h3>
+        <div class="table-box text-center">
+            <h3>Public Companies Bitcoin</h3>
             <table class="container">
                 <tbody>
+                    <thead>
+                        <tr>
+                            <th>Company Name</th>
+                            <th>Total Holdings</th>
+                        </tr>
+                    </thead>
                     <tr>
-                        <td>Genesis Block Date</td>
-                        <td>3 January 2009</td>
+                        <td>MicroStrategy Inc.</td>
+                        <td id="micro"></td>
                     </tr>
                     <tr>
-                        <td>Mining Algorithm</td>
-                        <td>SHA-256</td>
+                        <td>Tesla</td>
+                        <td id="tes"></td>
                     </tr>
                     <tr>
-                        <td>Difficulty</td>
-                        <td>24,371,874,614,346</td>
+                        <td>Galaxy Digital Holdings</td>
+                        <td id="galaxy"></td>
                     </tr>
                     <tr>
-                        <td>Block Size</td>
-                        <td>127,331,195 Bytes</td>
+                        <td>Square Inc.</td>
+                        <td id="square"></td>
                     </tr>
                     <tr>
-                        <td>Latest Hash</td>
-                        <td>000000000......47375953</td>
+                        <td>Marathon Patent Group   </td>
+                        <td id="marathon"></td>
                     </tr>
                     <tr>
-                        <td>Previous Hash</td>
-                        <td>00000000.....fb2a2c0d</td>
+                        <td>Hut 8 Mining Corp</td>
+                        <td id="hut"></td>
                     </tr>
                     <tr>
-                        <td>Bitcoin Hash Rate</td>
-                        <td>170.8 EH/s</td>
+                        <td>Coinbase</td>
+                        <td id="coin"></td>
                     </tr>
                     <tr>
-                        <td>Target Block Time</td>
-                        <td>10.00 Minutes</td>
+                        <td>NEXON Co Ltd</td>
+                        <td id="nexon"></td>
                     </tr>
                     <tr>
-                        <td>Real Block Time</td>
-                        <td>9.46 Minutes</td>
+                        <td>Voyager Digital LTD</td>
+                        <td id="voyag"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+    <!-- ######################################################################################### -->
 
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     ​
 
 
 
-   
 
 
-    <footer id="footer">
+
+    <!--footer id="footer">
         <p>Copyright &copy; 2022 <img src="images/logo-trans.png" alt="logo" width="195" height="60"
                 class="ml-5 d-inline-block align-top" alt="" loading="lazy"> All Rights Reserved.</p>
-    </footer>
+    </footer-->
 
     <script>
-            var icon = document.getElementById("icon")
+        
+            // toggle between dark and light themes
+                   
+            // var icon = document.getElementById("icon");
 
-            icon.onclick = function () {
-                document.body.classList.toggle("dark-theme")
-                if(document.body.classList.contains("dark-theme")){
-                    icon.src = "images/sun.png";
-                }else {
-                    icon.src = "images/moon.png"
-                }
-            }
+            // icon.onclick = function () {
+            //     document.body.classList.toggle("dark-theme")
+            //     if (document.body.classList.contains("dark-theme")) {
+            //         icon.src = "images/moon.png";
+            //     } else {
+            //         icon.src = "images/sun.png"
+            //     }
+            // }
+
+            // adds comma between numbers more than 1000
 
             function numberWithCommas(x) {
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             }
 
-            function roundNumber(num){
-                (Math.round(num * 100) / 100).toFixed(2);
-            }
-            Number.prototype.toFixedNoRound = function(){
-                const factor = Math.pow(10, 1);
-                return Math.floor(this * factor)/factor;
-            }
+            // fixed numbers with out rounding
+            // and abbreviate numbers with suffix
+            // for numbers greater than billion
 
             function toFixedNoRound(value) {
                 const factor = Math.pow(10, 1);
                 let result = (value / 1000000000);
                 result =  Math.floor(result * factor)/factor;
-                result = result + 'B';
+                result = result + ' B';
                 return result;
          
             }
-            async function getPrice() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.market_data.current_price.usd;
-            }
-            getPrice().then(data => 
-            {
-                document.getElementById('price-id').innerHTML = "$" + numberWithCommas(data);
-                console.log(data)
-            });
 
-            async function getAth() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.market_data.ath.usd;
-            }
-            getAth().then(data => 
-            {
-                document.getElementById('ath-id').innerHTML = "$" + numberWithCommas(data);
-                console.log(data)
-            });
-
-            async function getChange() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.market_data.ath_change_percentage.usd;
-            }
-            getChange().then(data => 
-            {
-                document.getElementById('change-id').innerHTML = "$" + (Math.round(data * 100) / 100).toFixed(2);
-                console.log(data)
-
-                console.log((Math.round(-37.87058 * 100) / 100).toFixed(2))
-            });
-
-            async function getVolume() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.market_data.total_volume.usd;
-            }
-            getVolume().then(data => 
-            {
-                document.getElementById('volume-id').innerHTML = "$" + toFixedNoRound(data);
-                console.log(data)
-            });
+            // reducing numbers to decimal of 8
 
             function calc(num) {
                 var with8Decimals = num.toString().match(/^-?\d+(?:\.\d{0,8})?/)[0]
                 return with8Decimals
             }
-            
+
+            // change number suffix abbreviation to numbers
+
             function abTonu(value) {
                 let price = value.replace(/\$/g, '');
                 let num = price.substring(0, price.length - 1);
-                console.log(price)
 
-                var lastPriceValue=price.slice(-1);//d
+                var lastPriceValue=price.slice(-1);
                 if (lastPriceValue === 'K'){
                     return num * 1000;
                 }
@@ -515,139 +461,231 @@
                     return num * 1000000
                 }
             }
+
+            // api calls 
+
+            const bitcoin_url = "https://api.coingecko.com/api/v3/coins/bitcoin/";
+            const bitcoin_market =  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false/";
+            const companies_holdings = "https://api.coingecko.com/api/v3/companies/public_treasury/bitcoin/";
             
-            abTonu(document.getElementById('dollarAmt5').innerHTML)
+            // store response recieved from api calls to these variables
 
-            async function usdToBtc() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                let price = data.market_data.current_price.usd;
-                return data.market_data.current_price.usd;
-            }
-            usdToBtc().then(data => 
-            {
-                let id=1;
-                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
-                console.log("type " + typeof dollar)
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+            var bitcoin_data, market_data, companies_data;
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=2;
-                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+            // console.log("bitcoin data value " + bitcoin_data)
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=3;
-                let dollar = document.getElementById('dollarAmt'+ id).innerHTML.replace(/\$/g, '');
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+            // fetch Bitcoin Price , Total Volume , All Time High,
+            // Bitcoin Network table data, to render initially
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=4;
+            fetch(bitcoin_url)
+            .then(res => res.json())
+            .then(data => bitcoin_data = data)
+            .then(() => {
+                document.getElementById('price-id').innerHTML = "$" + numberWithCommas(bitcoin_data.market_data.current_price.usd);
+                // console.log("this is from the api " + numberWithCommas(bitcoin_data.market_data.current_price.usd))
+                document.getElementById('ath-id').innerHTML = "$" + numberWithCommas(bitcoin_data.market_data.ath.usd);
+                document.getElementById('volume-id').innerHTML = "$" + toFixedNoRound(bitcoin_data.market_data.total_volume.usd);
+
+                let id1=1;
+                let dollar1 = document.getElementById('dollarAmt'+ id1).innerHTML.replace(/\$/g, '');
+                let btc1 = document.getElementById('bitcoinAmt' + id1).innerHTML = calc(dollar1/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id2=2;
+                let dollar2 = document.getElementById('dollarAmt'+ id2).innerHTML.replace(/\$/g, '');
+                let btc2 = document.getElementById('bitcoinAmt' + id2).innerHTML = calc(dollar2/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id3=3;
+                let dollar3 = document.getElementById('dollarAmt'+ id3).innerHTML.replace(/\$/g, '');
+                let btc3 = document.getElementById('bitcoinAmt' + id3).innerHTML = calc(dollar3/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id4=4;
                 
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+                let dollar_4 = document.getElementById('dollarAmt'+ id4).innerHTML;
+                let dollar4 = abTonu(dollar_4);
+                let btc4 = document.getElementById('bitcoinAmt' + id4).innerHTML = calc(dollar4/bitcoin_data.market_data.current_price.usd) + " BTC";
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=5;
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+                let id5=5;
+                let dollar_5 = document.getElementById('dollarAmt'+ id5).innerHTML;
+                let dollar5 = abTonu(dollar_5);
+                let btc5 = document.getElementById('bitcoinAmt' + id5).innerHTML = calc(dollar5/bitcoin_data.market_data.current_price.usd) + " BTC";
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=6;
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+                let id6=6;
+                let dollar_6 = document.getElementById('dollarAmt'+ id6).innerHTML;
+                let dollar6 = abTonu(dollar_6);
+                let btc6 = document.getElementById('bitcoinAmt' + id6).innerHTML = calc(dollar6/bitcoin_data.market_data.current_price.usd) + " BTC";
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=7;
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+                let id7=7;
+                let dollar_7 = document.getElementById('dollarAmt'+ id7).innerHTML;
+                let dollar7 = abTonu(dollar_7);
+                let btc7 = document.getElementById('bitcoinAmt' + id7).innerHTML = calc(dollar7/bitcoin_data.market_data.current_price.usd) + " BTC";
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=8;
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
+                let id8=8;
+                let dollar_8 = document.getElementById('dollarAmt'+ id8).innerHTML;
+                let dollar8 = abTonu(dollar_8);
+                let btc8 = document.getElementById('bitcoinAmt' + id8).innerHTML = calc(dollar8/bitcoin_data.market_data.current_price.usd) + " BTC";
 
-            });
-            usdToBtc().then(data => 
-            {
-                let id=9;
-                let dollar1 = document.getElementById('dollarAmt'+ id).innerHTML;
-                let dollar = abTonu(dollar1);
-                let btc = document.getElementById('bitcoinAmt' + id).innerHTML = calc(dollar/data) + " BTC";
-                console.log(btc + "id is " + id);
 
-            });
+                let id9=9;
+                let dollar_9 = document.getElementById('dollarAmt'+ id9).innerHTML;
+                let dollar9 = abTonu(dollar_9);
+                let btc9 = document.getElementById('bitcoinAmt' + id9).innerHTML = calc(dollar9/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                document.getElementById('sentiment-up').innerHTML = bitcoin_data.sentiment_votes_up_percentage + "%( CoinGecko)";
+                document.getElementById('sentiment-down').innerHTML = bitcoin_data.sentiment_votes_down_percentage + "%( CoinGecko)";
+                document.getElementById('genesis-date').innerHTML =  new Date(bitcoin_data.genesis_date) ;
+                document.getElementById('coingecko-score').innerHTML =  bitcoin_data.coingecko_score;
+                document.getElementById('interest-score').innerHTML =  bitcoin_data.public_interest_score;
+                document.getElementById('hash-alg').innerHTML =  bitcoin_data.hashing_algorithm;
+                document.getElementById('block-time').innerHTML =  bitcoin_data.block_time_in_minutes + " Minutes";
+
+            })
+        
+            // fetch Bitcoin Price , Total Volume , All Time High,
+            // Bitcoin Network table data,
+            // and also Bitcoin Price table data by updating every 10 sec
+
+           setInterval(() => fetch(bitcoin_url)
+            .then(res => res.json())
+            .then(data => bitcoin_data = data)
+            .then(() => {
+                document.getElementById('price-id').innerHTML = "$" + numberWithCommas(bitcoin_data.market_data.current_price.usd);
+                // console.log("this is from the api " + numberWithCommas(bitcoin_data.market_data.current_price.usd))
+                document.getElementById('ath-id').innerHTML = "$" + numberWithCommas(bitcoin_data.market_data.ath.usd);
+                document.getElementById('volume-id').innerHTML = "$" + toFixedNoRound(bitcoin_data.market_data.total_volume.usd);
+
+                let id1=1;
+                let dollar1 = document.getElementById('dollarAmt'+ id1).innerHTML.replace(/\$/g, '');
+                let btc1 = document.getElementById('bitcoinAmt' + id1).innerHTML = calc(dollar1/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id2=2;
+                let dollar2 = document.getElementById('dollarAmt'+ id2).innerHTML.replace(/\$/g, '');
+                let btc2 = document.getElementById('bitcoinAmt' + id2).innerHTML = calc(dollar2/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id3=3;
+                let dollar3 = document.getElementById('dollarAmt'+ id3).innerHTML.replace(/\$/g, '');
+                let btc3 = document.getElementById('bitcoinAmt' + id3).innerHTML = calc(dollar3/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id4=4;
+                
+                let dollar_4 = document.getElementById('dollarAmt'+ id4).innerHTML;
+                let dollar4 = abTonu(dollar_4);
+                let btc4 = document.getElementById('bitcoinAmt' + id4).innerHTML = calc(dollar4/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id5=5;
+                let dollar_5 = document.getElementById('dollarAmt'+ id5).innerHTML;
+                let dollar5 = abTonu(dollar_5);
+                let btc5 = document.getElementById('bitcoinAmt' + id5).innerHTML = calc(dollar5/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id6=6;
+                let dollar_6 = document.getElementById('dollarAmt'+ id6).innerHTML;
+                let dollar6 = abTonu(dollar_6);
+                let btc6 = document.getElementById('bitcoinAmt' + id6).innerHTML = calc(dollar6/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id7=7;
+                let dollar_7 = document.getElementById('dollarAmt'+ id7).innerHTML;
+                let dollar7 = abTonu(dollar_7);
+                let btc7 = document.getElementById('bitcoinAmt' + id7).innerHTML = calc(dollar7/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                let id8=8;
+                let dollar_8 = document.getElementById('dollarAmt'+ id8).innerHTML;
+                let dollar8 = abTonu(dollar_8);
+                let btc8 = document.getElementById('bitcoinAmt' + id8).innerHTML = calc(dollar8/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+
+                let id9=9;
+                let dollar_9 = document.getElementById('dollarAmt'+ id9).innerHTML;
+                let dollar9 = abTonu(dollar_9);
+                let btc9 = document.getElementById('bitcoinAmt' + id9).innerHTML = calc(dollar9/bitcoin_data.market_data.current_price.usd) + " BTC";
+
+                document.getElementById('sentiment-up').innerHTML = bitcoin_data.sentiment_votes_up_percentage + "%( CoinGecko)";
+                document.getElementById('sentiment-down').innerHTML = bitcoin_data.sentiment_votes_down_percentage + "%( CoinGecko)";
+                document.getElementById('genesis-date').innerHTML =  new Date(bitcoin_data.genesis_date) ;
+                document.getElementById('coingecko-score').innerHTML =  bitcoin_data.coingecko_score;
+                document.getElementById('interest-score').innerHTML =  bitcoin_data.public_interest_score;
+                document.getElementById('hash-alg').innerHTML =  bitcoin_data.hashing_algorithm;
+                document.getElementById('block-time').innerHTML =  bitcoin_data.block_time_in_minutes + " Minutes";
             
-            // sentiment-up
-            async function getSentimentUp() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.sentiment_votes_up_percentage;
-            }
-            getSentimentUp().then(data => 
-            {
-                document.getElementById('sentiment-up').innerHTML = data + "%( CoinGecko)";
-                console.log(data)
-            });
-            async function getSentimentDown() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.sentiment_votes_down_percentage;
-            }
-            getSentimentDown().then(data => 
-            {
-                document.getElementById('sentiment-down').innerHTML = data + "%( CoinGecko)";
-                console.log(data)
-            });
-            async function getAlexaScore() {
-                let response = await fetch(
-                "https://api.coingecko.com/api/v3/coins/bitcoin/"
-                );
-                let data = await response.json();
-                return data.public_interest_stats.alexa_rank;
-            }
-            getAlexaScore().then(data => 
-            {
-                document.getElementById('alexa_score').innerHTML = data + " alexa score ";
-                console.log(data)
-            });
 
+            })  , 10000)
+
+            // fetch Bitcoin Market table data to render initially
+
+            fetch(bitcoin_market)
+            .then(res => res.json())
+            .then(data => market_data = data)
+            .then(() => {
+                document.getElementById('market_cap').innerHTML =  "$" + toFixedNoRound(market_data.find(x => x.id === 'bitcoin').market_cap);
+                document.getElementById('rank').innerHTML =  market_data.find(x => x.id === 'bitcoin').market_cap_rank;
+                document.getElementById('high-24h').innerHTML = market_data.find(x => x.id === 'bitcoin').high_24h;
+                document.getElementById('low-24h').innerHTML = market_data.find(x => x.id === 'bitcoin').low_24h;
+                document.getElementById('change-24h').innerHTML =  market_data.find(x => x.id === 'bitcoin').price_change_percentage_24h + "%";
+                document.getElementById('circulatory').innerHTML =  market_data.find(x => x.id === 'bitcoin').circulating_supply;
+                document.getElementById('tot-supply').innerHTML =  market_data.find(x => x.id === 'bitcoin').total_supply;
+                document.getElementById('max-supply').innerHTML =   market_data.find(x => x.id === 'bitcoin').max_supply;
+                document.getElementById('ath-change').innerHTML =  market_data.find(x => x.id === 'bitcoin').ath_change_percentage + "%";
+                // console.log("market data updated    ")
+
+            })
+
+            // fetch Bitcoin Market table data every 10 sec
+
+            setInterval(() => fetch(bitcoin_market)
+            .then(res => res.json())
+            .then(data => market_data = data)
+            .then(() => {
+                document.getElementById('market_cap').innerHTML =  "$" + toFixedNoRound(market_data.find(x => x.id === 'bitcoin').market_cap);
+                document.getElementById('rank').innerHTML =  market_data.find(x => x.id === 'bitcoin').market_cap_rank;
+                document.getElementById('high-24h').innerHTML = market_data.find(x => x.id === 'bitcoin').high_24h;
+                document.getElementById('low-24h').innerHTML = market_data.find(x => x.id === 'bitcoin').low_24h;
+                document.getElementById('change-24h').innerHTML =  market_data.find(x => x.id === 'bitcoin').price_change_percentage_24h + "%";
+                document.getElementById('circulatory').innerHTML =  market_data.find(x => x.id === 'bitcoin').circulating_supply;
+                document.getElementById('tot-supply').innerHTML =  market_data.find(x => x.id === 'bitcoin').total_supply;
+                document.getElementById('max-supply').innerHTML =   market_data.find(x => x.id === 'bitcoin').max_supply;
+                document.getElementById('ath-change').innerHTML =  market_data.find(x => x.id === 'bitcoin').ath_change_percentage + "%";
+                // console.log("market data updated    ")
+
+            }) , 10000)
+
+            // fetch Public Companies  bitcoin to render initially
+
+            fetch(companies_holdings)
+            .then(res => res.json())
+            .then(data => companies_data = data)
+            .then(() => {
+                document.getElementById('micro').innerHTML =  companies_data.companies.find(x => x.name === 'MicroStrategy Inc.').total_holdings;
+                document.getElementById('tes').innerHTML =  companies_data.companies.find(x => x.name === 'Tesla').total_holdings;
+                document.getElementById('galaxy').innerHTML =  companies_data.companies.find(x => x.name === 'Galaxy Digital Holdings').total_holdings;
+                document.getElementById('square').innerHTML =  companies_data.companies.find(x => x.name === 'Square Inc.').total_holdings;;
+                document.getElementById('marathon').innerHTML =  companies_data.companies.find(x => x.name === 'Marathon Patent Group').total_holdings;
+                document.getElementById('hut').innerHTML =  companies_data.companies.find(x => x.name === 'Hut 8 Mining Corp').total_holdings;
+                document.getElementById('coin').innerHTML =  companies_data.companies.find(x => x.name === 'Coinbase').total_holdings;;
+                document.getElementById('nexon').innerHTML =  companies_data.companies.find(x => x.name === 'NEXON Co Ltd').total_holdings;;
+                document.getElementById('voyag').innerHTML =  companies_data.companies.find(x => x.name === 'Voyager Digital LTD').total_holdings;;
+            
+
+            })
+
+            // fetch Public Companies  bitcoin every 10 sec
+
+            setInterval(() => fetch(companies_holdings)
+            .then(res => res.json())
+            .then(data => companies_data = data)
+            .then(() => {
+                document.getElementById('micro').innerHTML =  companies_data.companies.find(x => x.name === 'MicroStrategy Inc.').total_holdings;
+                document.getElementById('tes').innerHTML =  companies_data.companies.find(x => x.name === 'Tesla').total_holdings;
+                document.getElementById('galaxy').innerHTML =  companies_data.companies.find(x => x.name === 'Galaxy Digital Holdings').total_holdings;
+                document.getElementById('square').innerHTML =  companies_data.companies.find(x => x.name === 'Square Inc.').total_holdings;;
+                document.getElementById('marathon').innerHTML =  companies_data.companies.find(x => x.name === 'Marathon Patent Group').total_holdings;
+                document.getElementById('hut').innerHTML =  companies_data.companies.find(x => x.name === 'Hut 8 Mining Corp').total_holdings;
+                document.getElementById('coin').innerHTML =  companies_data.companies.find(x => x.name === 'Coinbase').total_holdings;;
+                document.getElementById('nexon').innerHTML =  companies_data.companies.find(x => x.name === 'NEXON Co Ltd').total_holdings;;
+                document.getElementById('voyag').innerHTML =  companies_data.companies.find(x => x.name === 'Voyager Digital LTD').total_holdings;;
+            
+
+            }) , 10000)
+
+            
             
     </script>
-
 </body>
-
 </html>
