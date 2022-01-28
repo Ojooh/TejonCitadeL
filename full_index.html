@@ -13,15 +13,21 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
 
     <!-- Bootstrap, fontawesome, animation, Base, custom -->
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="lib/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="lib/animation/css/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    
+    
 
 
     <title>Tejon Citadel</title>
+
+    
 
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -43,6 +49,10 @@
                 <span class="logo-txt">
                     TEJON <br><strong>CITADEL</strong>
                 </span>
+                <ul>
+                    <li><a href="">Follow on <i class="fab fa-twitter" style="font-size:20px; "></i></a></li>
+                    <li><a href="">Purchase <i class="fab fa-btc" style="font-size:20px; "></i></a></li>
+                </ul>
             </nav>
             <div class="floating-icons">
                 <div class="float-1">
@@ -97,6 +107,17 @@
                         <div class="header-hero-img wow fadeInRight">
                             <img src="img/bg/hero/hero-1.svg" alt="bitcoin hero image" class="align-top" />
                         </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container-fluid d-none">
+                <div class="row p-0">
+                    <div class="col-12 p-0">
+                        <video id="header-vd" class="w-100" autoplay muted>
+                            <!-- <source src="video/vid-0.mp4" id="mp4Source" type="video/mp4"> -->
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -231,6 +252,7 @@
                             </div>
             </div>
         </section>
+
         <section id="video-bg">
             <div class="videobg-section my-4">
                 <div class="w-100 imgbg">
@@ -242,13 +264,300 @@
             
             </div>
         </section>
-        <section id="btc-countery">
+
+        <!-- <section id="btc-countery">
             <div class="btc-counter-section my-4">
                 <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
                 <div class="livecoinwatch-widget-1" lcw-coin="BTC" lcw-base="USD" lcw-secondary="BTC" lcw-period="m"
                     lcw-color-tx="#ffffff" lcw-color-pr="#fcb900" lcw-color-bg="#1f2434" lcw-border-w="1" lcw-digits="7"></div>
             </div>
+        </section> -->
+
+        <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   BITCOIN PRICE DATA   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+        
+        <section class="top-content">
+        
+        
+            <h1 class="text-center">Bitcoin price data</h1>
+        
+            </div>
+        
+            <div class="content-top">
+        
+                <div class="pricing-box-container">
+                    <div class="chart-box text-center" style="width: 50%  ;">
+                        <div class="charty-shell">
+                            <div id="chartContainer"></div>
+                        </div>
+                    </div>
+        
+        
+                </div>
+                <div style="display: flex;flex-wrap: wrap;">
+                    <div class="pricing-box text-center">
+                        <h1> <i class="fa fa-bitcoin fa-lg"></i> <br /> <br /> Bitcoin price
+                        </h1>
+                        <ul class="features-list">
+                            <br>
+                            <br>
+                            <li id="price-id"></li>
+                        </ul>
+                        <!-- <hr> -->
+                        <hr>
+        
+        
+                    </div>
+                    <div class="pricing-box text-center">
+                        <h1> <i class="fa fa-line-chart fa-lg"></i> <br /> <br /> Total volume</h1>
+                        <ul class="features-list">
+                            <br>
+                            <br>
+                            <li id="volume-id"></li>
+        
+                        </ul>
+                        <hr>
+                    </div>
+        
+                    <div class="pricing-box text-center">
+                        <h1><i class="fa fa-arrow-up fa-lg"></i> <br /> <br /> All time high (ATH)</h1>
+                        <ul class="features-list">
+                            <br>
+                            <li id="ath-id"></li>
+                        </ul>
+                        <hr>
+        
+                    </div>
+        
+                    <div class="single-chart text-center  chart-naranja"
+                        style="  background-color: #1a1a1a; color: whitesmoke  !important;padding-bottom: 5px !important;">
+                        <h1 style="font-size: 30px; color: #dc540c;" id="company-economy">CIRCULATING SUPPLY</h1>
+                        <svg viewBox="-10 0 54 54" class="circular-chart naranja">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="20" y="20.35" class="percentage-2">90%</text>
+                        </svg>
+                    </div>
+                    <hr>
+        
+        
+                </div>
+        
+        
+            </div>
+        
+        
         </section>
+        
+        <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+        <!-- #####################################   CHART SECTION   ################################### -->
+        <!--Crypto Charts JavaScript Libraries-->
+        <script src="https://cdn.jsdelivr.net/npm/cryptocharts"></script>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        
+        <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$   BITCOIN STATISTICS   $$$$$$$$$$$$$$$$$$$$$$ -->
+        
+        <br>
+        <br>
+        <section class="top-content">
+        
+        
+            <div class="head">
+        
+                <h1 class="text-center">Bitcoin statistics</h1>
+                <div class="hl-block">
+                    <span class="circle circle-left"></span>
+                    <span class="hl"></span>
+                    <span class="circle circle-right"></span>
+                </div>
+            </div>
+        
+        
+        </section>
+        
+        <div class="table-box-container">
+            <div class="table-box text-center">
+                <h3>Bitcoin price</h3>
+                <table class="container">
+                    <tbody>
+                        <tr>
+                            <td id="dollarAmt1">$1.00 </td>
+                            <!-- <td id="bitcoinAmt1">0.00002449 BTC</td> -->
+                            <td id="bitcoinAmt1"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt2">$10</td>
+                            <td id="bitcoinAmt2"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt3">$100</td>
+                            <td id="bitcoinAmt3"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt4">$1K</td>
+                            <td id="bitcoinAmt4"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt5">$10K</td>
+                            <td id="bitcoinAmt5"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt6">$100K</td>
+                            <td id="bitcoinAmt6"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt7">$1M</td>
+                            <td id="bitcoinAmt7"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt8">$10M</td>
+                            <td id="bitcoinAmt8"></td>
+                        </tr>
+                        <tr>
+                            <td id="dollarAmt9">$100M</td>
+                            <td id="bitcoinAmt9"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box text-center">
+                <h3> Bitcoin Market Data</h3>
+                <table class="container">
+                    <tbody>
+                        <tr>
+                            <td>Market Cap</td>
+                            <td id="market_cap"></td>
+                        </tr>
+                        <tr>
+                            <td>Market Cap Rank</td>
+                            <td id="rank"></td>
+                        </tr>
+                        <tr>
+                            <td>High 24H</td>
+                            <td id="high-24h"></td>
+                        </tr>
+                        <tr>
+                            <td>Low 24H</td>
+                            <td id="low-24h"></td>
+                        </tr>
+                        <tr>
+                            <td>Price Change 24H</td>
+                            <td id="change-24h"></td>
+                        </tr>
+                        <tr>
+                            <td>Circulatory Supply</td>
+                            <td id="circulatory"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Supply</td>
+                            <!-- <td id="alexa_score">34578 alexa score</td> -->
+                            <td id="tot-supply"></td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Supply</td>
+                            <!-- <td id="sentiment-up">62.850%( CoinGecko)</td> -->
+                            <td id="max-supply"></td>
+                        </tr>
+                        <tr>
+                            <td>ATH Change</td>
+                            <!-- <td id="sentiment-down">37.150% ( CoinGecko)</td> -->
+                            <td id="ath-change"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box text-center">
+                <h3>Bitcoin Network</h3>
+                <table class="container">
+                    <tbody>
+                        <tr>
+                            <td>Hashing Algotithm </td>
+                            <td id="hash-alg"></td>
+                        </tr>
+                        <tr>
+                            <td>Block Time </td>
+                            <td id="block-time"></td>
+                        </tr>
+                        <tr>
+                            <td>Genesis Date</td>
+                            <td id="genesis-date"></td>
+                        </tr>
+                        <tr>
+                            <td>Sentiment Up Score</td>
+                            <td id="sentiment-up"></td>
+                        </tr>
+                        <tr>
+                            <td>Sentiment Down Score</td>
+                            <td id="sentiment-down"></td>
+                        </tr>
+                        <tr>
+                            <td>Coingecko Score</td>
+                            <td id="coingecko-score"></td>
+                        </tr>
+                        <tr>
+                            <td>Public Interest Score</td>
+                            <td id="interest-score"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-box text-center">
+                <h3>Public Companies Bitcoin</h3>
+                <table class="container">
+                    <tbody>
+                        <thead>
+                            <tr>
+                                <th>Company Name</th>
+                                <th>Total Holdings</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>MicroStrategy Inc.</td>
+                            <td id="micro"></td>
+                        </tr>
+                        <tr>
+                            <td>Tesla</td>
+                            <td id="tes"></td>
+                        </tr>
+                        <tr>
+                            <td>Galaxy Digital Holdings</td>
+                            <td id="galaxy"></td>
+                        </tr>
+                        <tr>
+                            <td>Square Inc.</td>
+                            <td id="square"></td>
+                        </tr>
+                        <tr>
+                            <td>Marathon Patent Group </td>
+                            <td id="marathon"></td>
+                        </tr>
+                        <tr>
+                            <td>Hut 8 Mining Corp</td>
+                            <td id="hut"></td>
+                        </tr>
+                        <tr>
+                            <td>Coinbase</td>
+                            <td id="coin"></td>
+                        </tr>
+                        <tr>
+                            <td>NEXON Co Ltd</td>
+                            <td id="nexon"></td>
+                        </tr>
+                        <tr>
+                            <td>Voyager Digital LTD</td>
+                            <td id="voyag"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+        
 
         <section id="btc-calc">
             <div class="container my-4">
@@ -346,6 +655,9 @@
                                     target="blank" class="foot-link">
                                     Bitcoin Doesn’t Care About Your Politics
                                 </a><br>
+                                <a href="https://linktr.ee/hodlpunk" target="blank" class="foot-link">
+                                    Down the Rabbit Hole
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -361,6 +673,9 @@
 
     <script src="js/fullBase.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/btc.js"></script>
+
 
 </body>
 
