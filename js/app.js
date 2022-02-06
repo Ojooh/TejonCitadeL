@@ -149,3 +149,8 @@ $(window).on('scroll', function () {
 $('#back-to top a').on("click", function () {
     $('body,html').animate({ scrollTop: 0 }, 800); return false;
 });
+
+$(document).on("click", function (e) {
+    console.log(e.target)
+    // $('body,html').animate({ scrollTop: 0 }, 800); return false;
+});
